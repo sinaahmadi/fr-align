@@ -1,0 +1,5 @@
+xmltodict
+csv
+shortuuid
+rdflib
+SPARQLWrapper

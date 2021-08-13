@@ -47,7 +47,7 @@ def retrieve_pos(tlf_pos):
 		print(list(set(pos_tags)))
 		# print(tlf_pos_mapper_inverse["noun"])
 
-	pos_mapper = {"adv": "adverb", "subst": "noun", "adj": "adjective", "verbe": "verb"}
+	pos_mapper = {"adv": "adverb", "adj": "adjective", "subst": "noun", "verbe": "verb"}
 	gender_mapper = {"fém": "feminine", "masc": "masculine"}
 
 	for p in pos_mapper:
@@ -81,7 +81,7 @@ def extract_def(sync_H_H):
 	The content of the sync tag should be given to this function based on the JSON files of TLFi.
 	"""
 	senses = dict()
-	sense_id = ""
+	sense_id, unk_sense_counter = "", -1
 
 	for sync in sync_H_H:
 		# print(sync)
@@ -129,7 +129,8 @@ def extract_def(sync_H_H):
 		try:
 			sense_id = sync["parah"]["da"]["G"]
 		except:
-			sense_id = "UND"
+			sense_id = "UND"+str(unk_sense_counter)
+			unk_sense_counter -= 1
 
 		sense_id = sense_id.replace(" _", "")
 		print("sense id is ", sense_id)
@@ -172,6 +173,11 @@ def extract_def(sync_H_H):
 
 	return senses
 
+def extract_exe(sync_H_H):
+	# Given an entry in TLFi, find the example associated to the sense
+	if "exe" in sync_H_H:
+		pass
+
 def extract_tlfi():
 	# extracts lemma, part-of-speech, gender, senses and examples from TLFi
 	for file in os.listdir("../resources/tlfi_json"):#[0:1]:
@@ -183,7 +189,7 @@ def extract_tlfi():
 
 				for entry in dico:
 					print()
-					try:
+					try: #if True:
 						microstructure = {
 							"id": "",
 							"lemma": "",
@@ -216,40 +222,45 @@ def extract_tlfi():
 								# the entry contains terminological data, e.g. PY(O)- for PARTHÉNOGENÈSE
 								continue
 
-						
 						print("+" * 20, microstructure["lemma"], microstructure["id"])
 						#  ======================== find senses
-
+						unk_sense_counter = 1
 						if "B" in entry["sync"]["H"] and "def" in entry["sync"]["H"]["B"]:
+
 							if "R" in entry["sync"]["H"]["B"]["def"]["da"]:
-								senses["UND"] = entry["sync"]["H"]["B"]["def"]["da"]["R"]
+								senses["UND_"+str(unk_sense_counter)] = entry["sync"]["H"]["B"]["def"]["da"]["R"]
+
 							if "I" in entry["sync"]["H"]["B"]["def"]["da"]:
-								if type(senses["UND"]) == str:
+								if type(senses["UND_"+str(unk_sense_counter)]) == str:
 									if type(entry["sync"]["H"]["B"]["def"]["da"]["I"]) == str:
-										senses["UND"] = senses["UND"] + " " + entry["sync"]["H"]["B"]["def"]["da"]["I"]
+										print(type(senses["UND_"+str(unk_sense_counter)]))
+										senses["UND_"+str(unk_sense_counter)] = senses["UND_"+str(unk_sense_counter)] + " " + entry["sync"]["H"]["B"]["def"]["da"]["I"]
 									elif type(entry["sync"]["H"]["B"]["def"]["da"]["I"]) == list:
-										senses["UND"] = senses["UND"] + " " + " ".join(filter(None, entry["sync"]["H"]["B"]["def"]["da"]["I"]))
+										senses["UND_"+str(unk_sense_counter)] = senses["UND_"+str(unk_sense_counter)] + " " + " ".join(filter(None, entry["sync"]["H"]["B"]["def"]["da"]["I"]))
 
-								if type(senses["UND"]) == list:
+								if type(senses["UND_"+str(unk_sense_counter)]) == list:
 									if type(entry["sync"]["H"]["B"]["def"]["da"]["I"]) == str:
-										senses["UND"] = " ".join(filter(None, senses["UND"])) + " " + entry["sync"]["H"]["B"]["def"]["da"]["I"]
+										senses["UND_"+str(unk_sense_counter)] = " ".join(filter(None, senses["UND_"+str(unk_sense_counter)])) + " " + entry["sync"]["H"]["B"]["def"]["da"]["I"]
 									elif type(entry["sync"]["H"]["B"]["def"]["da"]["I"]) == list:
-										senses["UND"] = " ".join(filter(None, senses["UND"])) + " ".join(filter(None, entry["sync"]["H"]["B"]["def"]["da"]["I"]))
+										senses["UND_"+str(unk_sense_counter)] = " ".join(filter(None, senses["UND_"+str(unk_sense_counter)])) + " ".join(filter(None, entry["sync"]["H"]["B"]["def"]["da"]["I"]))
 
+								unk_sense_counter += 1
+						# else:
+						if "H" not in entry["sync"]["H"]:
+							# no senses are provided
+							print("no senses found for ", microstructure["lemma"])
+							# continue
 						else:
-							if "H" not in entry["sync"]["H"]:
-								# no senses are provided
-								print("no senses found for ", microstructure["lemma"])
-								# continue
-							else:
-								senses = extract_def(entry["sync"]["H"]["H"])
+							senses.update(extract_def(entry["sync"]["H"]["H"]))
 
 						# print("senses", senses)
 						if len(senses):
 						# 	if type(senses[0]) == list:
 						# 		senses = [item for items in senses for item in items]
-							microstructure["lemma"] = microstructure["lemma"].replace(",", "")
+							microstructure["lemma"] = microstructure["lemma"].replace(",", "").lower()
 							microstructure["pos"], microstructure["gender"] = retrieve_pos(microstructure["pos"])
+							if len(microstructure["gender"]):
+								microstructure["pos"] = "noun"
 							microstructure["senses"] = {s: clean_tlf(senses[s]) for s in senses} # clean
 							# if False not in microstructure["senses"]:
 							dictionary.append(microstructure)
@@ -279,14 +290,11 @@ def tlfi_lookup(word, pos):
 	with open("../output/extracted/tlfi_all.json", "r") as json_file:
 		for lex in json.load(json_file):
 			for entry in lex:
-				print(entry["lemma"], type(entry["lemma"]))
-				if word == entry["lemma"].strip().lower():
-					print(entry)
-					exit()
-
+				if word == entry["lemma"].strip().lower() and pos == entry["pos"]:
+					return entry
+	return {}
 # extract_tlfi()
 # merge_json_files()
-# tlfi_lookup("bien", "noun")
 
 
 

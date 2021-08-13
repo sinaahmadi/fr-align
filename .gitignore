@@ -34,5 +34,7 @@ Temporary Items
 output
 resources
 tlfi 
+*/__pycache__/
+code/else.py
 # End of https://www.toptal.com/developers/gitignore/api/macos
 
