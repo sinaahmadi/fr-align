@@ -19,6 +19,7 @@ This script converts TLFi into a josn file where each entry is structured as fol
 }
 
 """
+sense_IDs = list()
 
 def retrieve_pos(tlf_pos):
 	"""
@@ -72,115 +73,142 @@ def convert_to_json():
 
 def clean_tlf(text):
 	# cleans senses in TLFi
+	# TO DO: ":" at the end to be removed
+	# TO DO: remove brackets at the beginning and at the end
 	if type(text) != str:
 		return False
-	return " ".join(text.replace("\n", " ").replace(",,", "").replace("„", "").split())
+	return " ".join(text.replace("\n", " ").replace(",,", "").replace("„", "").replace("`` (", "").split())
 
 def extract_def(sync_H_H):
 	"""
 	The content of the sync tag should be given to this function based on the JSON files of TLFi.
 	"""
 	senses = dict()
-	sense_id, unk_sense_counter = "", -1
+	sense_id, unk_sub_sense_counter = "", -1
 
 	for sync in sync_H_H:
 		# print(sync)
 		if type(sync) == str:
 			continue
 
-		if "B" not in sync:
-			print("ERROR")
-
-			if type(sync) == dict:
-				# there is a hierarchy of senses
-				# we only process two levels as follows.
-				print("yes")
-				for subsense in sync:
-					if "H" == subsense:
-						if type(sync[subsense]) == list:
-							print(" there is no more subsenses")
-							# print(subsense)
-							print(type(sync[subsense]))
-							senses.update(extract_def(sync[subsense]))
-						else:
-							print("|||||||||||||")
-							# there is another level of subsenses
-							for subsubsense in sync[subsense]["H"]:
-								if "H" == subsense:
-									if type(sync[subsense]) == list:
-										# there is no more subsenses
-										for subsubsense in sync[subsense]:
-											# print(extract_def(subsense))
-											senses.update(extract_def(subsense))
-											# print(subsubsense, type(subsubsense))
-											# print(extract_def(subsense))
+		if type(sync) == dict:
+			# there is a hierarchy of senses
+			# we only process two levels as follows.
+			print("hierarchy of senses")
+			for subsense in sync:
+				if "H" == subsense:
+					try:
+						supersense_ID = sync["parah"]["da"]["G"]
+					except:
+						supersense_ID = ""
+					if type(sync[subsense]) == list:
+						print(" there is no more subsenses")
+						# print(sync[subsense])
+						print(type(sync[subsense]))
+						extraced_senses = extract_def(sync[subsense])
+						for i in extraced_senses:
+							senses.update({(supersense_ID+i).replace(" ", ""): extraced_senses[i]})
+					else:
+						print("|||||||||||||")
+						# print(sync[subsense])
+						# # there is another level of subsenses
+						# for subsubsense in sync[subsense]["H"]:
+						# 	if "H" == subsense:
+						# 		if type(sync[subsense]) == list:
+						# 			# there is no more subsenses
+						# 			for subsubsense in sync[subsense]:
+						# 				# print(extract_def(subsense))
+						# 				senses.update(extract_def(subsense))
+						# 				# print(subsubsense, type(subsubsense))
+						# 				# print(extract_def(subsense))
 			
-			continue							
+			# continue							
 
-		if "def" in sync["B"]:
-			def_word = "def"
-		elif "ind" in sync["B"]:
-			def_word = "ind"
-		elif "cro" in sync["B"]:
-			def_word = "cro"
-		else:
-			continue
+		if "B" in sync:
 
-		try:
-			sense_id = sync["parah"]["da"]["G"]
-		except:
-			sense_id = "UND"+str(unk_sense_counter)
-			unk_sense_counter -= 1
+			if "syntita" in sync["B"]:
+				# syntita is used for words where the main entry appears in. In TLFi, such cases are provided in the
+				# main entry, making it difficult to distinguish senses from other entries
+				# continue
+				pass
 
-		sense_id = sense_id.replace(" _", "")
-		print("sense id is ", sense_id)
+			if "def" in sync["B"]:
+				def_word = "def"
+			elif "ind" in sync["B"]:
+				def_word = "ind"
+			elif "cro" in sync["B"]:
+				def_word = "cro"
+			else:
+				continue
 
-		print(def_word, sync["B"][def_word])
-		if type(sync["B"][def_word]) == list:
-			senses[sense_id] = " ".join([sense["da"]["R"] for sense in sync["B"][def_word]])
-
-		else:
-			for sense in sync["B"][def_word]["da"]:
-				print("this for, sense", sense, sense_id, sync["B"][def_word]["da"])
-				if type(sense) == dict:
-					print("sense", sense)
-					if len(sense["R"]):
-						if type(sense["R"]) == str:
-							senses[sense_id] = sense["R"]
-						elif type(sense["R"]) == list:
-							if False not in [True if type(i) == str else False for i in sense["R"]]:
-								senses[sense_id] = " ".join(filter(None, sense["R"]))
-							else:
-								if "#text" in sense["R"]:
-									if type(sense["R"]["#text"]) == str:
-										senses[sense_id] = sense["R"]["#text"]
-									else:
-										senses[sense_id] = " ".join(filter(None, sense["R"]["#text"]))
-								else:
-									pass
-									# senses[sense_id] = " ".join(filter(None, sense["R"]))
-								
+			try:
+				sense_id = sync["parah"]["da"]["G"]
+				if sense_id in sense_IDs:
+					while True:
+						if unk_sub_sense_counter in sense_IDs:
+							unk_sub_sense_counter -= 1
+						else:
+							sense_id = "UND"+str(unk_sub_sense_counter)
+							break
 				
-				elif sense == "R":
-					print("r-b", sync["B"][def_word]["da"]["R"])
-					if type(sync["B"][def_word]["da"]["R"]) == str:
-						senses[sense_id] = sync["B"][def_word]["da"]["R"]
-					elif type(sync["B"][def_word]["da"]["R"]) == list:
-						if False not in [False if type(i) != str else True for i in sync["B"][def_word]["da"]["R"]]:
-							senses[sense_id] = " ".join(filter(None, sync["B"][def_word]["da"]["R"]))
-					elif type(sync["B"][def_word]["da"]["R"]) == dict:
-						senses[sense_id] = sync["B"][def_word]["da"]["R"]["#text"]
+				sense_IDs.append(str(unk_sub_sense_counter.replace("UND", "")))
+
+			except:
+				while True:
+					if unk_sub_sense_counter in sense_IDs:
+						unk_sub_sense_counter -= 1
+					else:
+						sense_id = "UND"+str(unk_sub_sense_counter)
+						sense_IDs.append(unk_sub_sense_counter)
+						break
+
+			sense_id = sense_id.replace(" _", "")
+
+			print("\n************************\n sense id is ", sense_id)
+			print(def_word, sync["B"][def_word])
+
+			if type(sync["B"][def_word]) == list:
+				senses[sense_id] = " ".join([sense["da"]["R"] for sense in sync["B"][def_word]])
+
+			else:
+				for sense in sync["B"][def_word]["da"]:
+					print("this for, sense", sense, "id", sense_id, sync["B"][def_word]["da"])
+					if type(sense) == dict:
+						print("sense", sense)
+						if len(sense["R"]):
+							if type(sense["R"]) == str:
+								senses[sense_id] = sense["R"]
+							elif type(sense["R"]) == list:
+								if False not in [True if type(i) == str else False for i in sense["R"]]:
+									senses[sense_id] = " ".join(filter(None, sense["R"]))
+								else:
+									if "#text" in sense["R"]:
+										if type(sense["R"]["#text"]) == str:
+											senses[sense_id] = sense["R"]["#text"]
+										else:
+											senses[sense_id] = " ".join(filter(None, sense["R"]["#text"]))
+									else:
+										pass
+										# senses[sense_id] = " ".join(filter(None, sense["R"]))
+									
+					
+					elif sense == "R":
+						print("r-b", sync["B"][def_word]["da"]["R"])
+						if type(sync["B"][def_word]["da"]["R"]) == str:
+							senses[sense_id] = sync["B"][def_word]["da"]["R"]
+						elif type(sync["B"][def_word]["da"]["R"]) == list:
+							if False not in [False if type(i) != str else True for i in sync["B"][def_word]["da"]["R"]]:
+								senses[sense_id] = " ".join(filter(None, sync["B"][def_word]["da"]["R"]))
+						elif type(sync["B"][def_word]["da"]["R"]) == dict:
+							senses[sense_id] = sync["B"][def_word]["da"]["R"]["#text"]
 
 	return senses
-
-def extract_exe(sync_H_H):
-	# Given an entry in TLFi, find the example associated to the sense
-	if "exe" in sync_H_H:
-		pass
 
 def extract_tlfi():
 	# extracts lemma, part-of-speech, gender, senses and examples from TLFi
 	for file in os.listdir("../resources/tlfi_json"):#[0:1]:
+		# if file != "t11_5.xm7.json":
+		# 	continue
 		print("Working on %s"%file)
 		if file.endswith(".json"):
 			dictionary = list()
@@ -188,8 +216,8 @@ def extract_tlfi():
 				dico = json.load(json_file)["dico"]["art"]
 
 				for entry in dico:
-					print()
-					try: #if True:
+					sense_IDs.clear()
+					try: #if True:#
 						microstructure = {
 							"id": "",
 							"lemma": "",
@@ -200,6 +228,9 @@ def extract_tlfi():
 						# example to be added
 						
 						microstructure["id"] = entry["@id"]
+						# if microstructure["id"] != "55177":
+						# 	# print()
+						# 	continue
 						senses = dict()
 						#  ========================  find lemma
 						if "da" not in entry["ved"]["mot"] or "cod" not in entry["ved"]:
@@ -225,6 +256,13 @@ def extract_tlfi():
 						print("+" * 20, microstructure["lemma"], microstructure["id"])
 						#  ======================== find senses
 						unk_sense_counter = 1
+						while True:
+							if unk_sense_counter in sense_IDs:
+								unk_sense_counter += 1
+							else:
+								sense_IDs.append(unk_sense_counter)
+								break
+
 						if "B" in entry["sync"]["H"] and "def" in entry["sync"]["H"]["B"]:
 
 							if "R" in entry["sync"]["H"]["B"]["def"]["da"]:
@@ -264,12 +302,20 @@ def extract_tlfi():
 							microstructure["senses"] = {s: clean_tlf(senses[s]) for s in senses} # clean
 							# if False not in microstructure["senses"]:
 							dictionary.append(microstructure)
+							print()
+							for i in microstructure["senses"]:
+								print(i, microstructure["senses"][i])
 
 					except:
 						print("An exception occurred")
 
 			with open(os.path.join("../output/extracted", file), "w", encoding='utf-8') as json_w:
 					json.dump(dictionary, json_w, indent=4, sort_keys=True)
+
+def extract_exe(sync_H_H):
+	# Given an entry in TLFi, find the example associated to the sense
+	if "exe" in sync_H_H:
+		pass
 
 def merge_json_files():
 	# merge json files of TLFi. This should be run after extract_tlfi()
@@ -286,15 +332,23 @@ def merge_json_files():
 def tlfi_lookup(word, pos):
 	"""
 	Given a word and its part-of-speech, retrieve it on TLF. 
+	(23/08/2021) Update this function so that all entries with identical lemma and pos are retrieved.
 	"""
 	with open("../output/extracted/tlfi_all.json", "r") as json_file:
 		for lex in json.load(json_file):
 			for entry in lex:
-				if word == entry["lemma"].strip().lower() and pos == entry["pos"]:
+				if pos == "adjective":
+					pos = "adverb"
+				if word == entry["lemma"].strip().lower():# and pos in entry["pos"]:
 					return entry
 	return {}
+
 # extract_tlfi()
 # merge_json_files()
-
+# print(tlfi_lookup("mur", "noun"))
+# print(tlfi_lookup("bannir", "verb"))
+# print(tlfi_lookup("bannir", "verb"))
+# print(tlfi_lookup("unique", "adjective"))
+# print(tlfi_lookup("inhabituel", "adjective"))
 
 

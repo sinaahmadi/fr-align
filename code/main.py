@@ -131,9 +131,15 @@ def create_naisc_input(file_name):
 		with open("tlf_all_cleaned_converted.ttl", "w") as f: #encoding='utf-8'
 			f.write(prefixes + "\n\n".join(tlf_file))
 
-def create_annotation_sheet(wiktionnaire, tlfi):
-	# Given the retrieved data from both resources, create a sheet (tsv) for annotation
-	pass
+def combine_senses(senses_1, senses_2):
+	# Given the retrieved senses from both resources, create a combination of senses for for annotation
+	# senses_1: TLFi
+	# senses_2: Wiktionary
+	combined = list()
+	for s_1 in senses_1:
+		for s_2 in senses_2:
+			combined.append("\t%s\t%s\t\t%s\t%s"%(s_1, senses_1[s_1], senses_2[s_2], s_2))
+	return "\n".join(combined)
 
 if __name__ == '__main__':
 	"""
@@ -142,9 +148,11 @@ if __name__ == '__main__':
 	create a dataset with common entries for evaluation purposes
 	"""
 
-	wiktionary, tlfi_dict = list(), list()
-	for word in list(extract_mwsa_lemmata().values())[200: 300]: # random selection
-		# print("Processing", word)
+	wiktionary, tlfi_dict, annotation_sheet = list(), list(), list()
+	for word in list(extract_mwsa_lemmata().values())[0:200]: # random selection
+		if "\'" in word[0] or word[1] != "adjective":
+			continue
+		print("Processing ", word)
 
 		lemma = word[0]
 		pos = word[1]
@@ -158,6 +166,7 @@ if __name__ == '__main__':
 		entry_tlfi = tlfi.tlfi_lookup(lemma, pos)
 		
 		# Setting gender
+		gender = ""
 		if pos == "noun" and "gender" in entry_tlfi: 
 			gender = entry_tlfi["gender"]
 		elif pos == "noun" and "gender" not in entry_tlfi:
@@ -172,32 +181,31 @@ if __name__ == '__main__':
 		# Look up Wiktionnaire
 		# convert the output of the SPARQL query to a single dictionary with unique keys, i.e. lemma
 		entry_wiktionary = dict()
-   
 		for lexeme in dbnary.extract_dbnary(lemma, pos)["results"]["bindings"]:
-		  if lexeme["lexeme"]["value"] not in entry_wiktionary:
-		     if "gender" not in lexeme or (len(lexeme["gender"]["value"]) and lexeme["gender"]["value"].split("#")[-1] == gender):
-		        entry_wiktionary[lexeme["lexeme"]["value"]] = {
-		        "lemma": lemma,
-		        "pos": pos,
-		        "gender": gender,
-		        "senses": {lexeme["sense"]["value"]: lexeme["definition"]["value"]}
-		        }
-		  else:
-		     if "gender" not in lexeme or len(lexeme["gender"]["value"]) and lexeme["gender"]["value"].split("#")[-1] == gender:
-		        entry_wiktionary[lexeme["lexeme"]["value"]]["senses"].update({lexeme["sense"]["value"]: lexeme["definition"]["value"]})
+			if lexeme["lexeme"]["value"] not in entry_wiktionary:
+				if "gender" not in lexeme or \
+					((len(lexeme["gender"]["value"]) and lexeme["gender"]["value"].split("#")[-1] == gender)) or \
+					pos == "adjective" or \
+					pos == "adverb":
+					entry_wiktionary[lexeme["lexeme"]["value"]] = {
+					"lemma": lemma,
+					"pos": pos,
+					"gender": gender,
+					"senses": {lexeme["sense"]["value"]: lexeme["definition"]["value"]}
+					}
+				else:
+					if "gender" not in lexeme or len(lexeme["gender"]["value"]) and lexeme["gender"]["value"].split("#")[-1] == gender:
+						entry_wiktionary[lexeme["lexeme"]["value"]]["senses"].update({lexeme["sense"]["value"]: lexeme["definition"]["value"]})
 
 		# print(entry_tlfi)
 		# print(entry_wiktionary)
-		if len(entry_tlfi) and len(entry_wiktionary):
+		if len(entry_tlfi) and len(entry_wiktionary) and len(entry_tlfi["senses"]) < 18 and len(entry_wiktionary[list(entry_wiktionary.keys())[0]]["senses"]) < 18:
 			tlfi_dict.append(entry_tlfi)
 			wiktionary.append(entry_wiktionary)
 
-			print("%s|%s|%s\n%s\n%s"%(lemma, pos, gender, entry_tlfi["id"], list(entry_wiktionary.keys())[0]))
-			for s_1 in entry_tlfi["senses"]:
-				for s_2 in entry_wiktionary[list(entry_wiktionary.keys())[0]]["senses"]:
-					print("\t%s\t%s\t\t%s\t%s"%(s_1, entry_tlfi["senses"][s_1], entry_wiktionary[list(entry_wiktionary.keys())[0]]["senses"][s_2], s_2))
+			annotation_sheet.append("%s|%s|%s\n%s\n%s"%(lemma, pos, gender, "https://www.cnrtl.fr/definition/" + entry_tlfi["id"], list(entry_wiktionary.keys())[0]))
+			annotation_sheet.append(combine_senses(entry_tlfi["senses"], entry_wiktionary[list(entry_wiktionary.keys())[0]]["senses"]))
 			
-			print()
 
 	print(len(tlfi_dict) == len(wiktionary))
 	with open("../output/wiktionnaire_annotation.json", "w", encoding='utf-8') as f:
@@ -205,4 +213,7 @@ if __name__ == '__main__':
 
 	with open("../output/tlfi_annotation.json", "w", encoding='utf-8') as f:
 		json.dump(tlfi_dict, f, indent=4, sort_keys=True)
+
+	with open("../output/tlfi_wiktionnaire_align.tsv", "w") as f:
+		f.write("\n".join(annotation_sheet))
 	

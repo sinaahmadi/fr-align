@@ -47,18 +47,21 @@ def extract_dbnary(word, pos,):
    results = sparql.query().convert()
    return results
 
-def dbnary_lookup():
+def dbnary_lookup(lemma, pos):
    # convert the output of the SPARQL query to a single dictionary with unique keys, i.e. lemma
    # found these pos tags ['noun', 'properNoun', 'verb', 'adjective', 'adverb']
-   lemma = "beau"
-   pos = "adjective"
+   # lemma = "beau"
+   # pos = "adjective"
    gender = ""
    # gender = ""
    entry_wiktionary = dict()
    
    for lexeme in extract_dbnary(lemma, pos)["results"]["bindings"]:
       if lexeme["lexeme"]["value"] not in entry_wiktionary:
-         if "gender" not in lexeme or (len(lexeme["gender"]["value"]) and lexeme["gender"]["value"].split("#")[-1] == gender):
+         if "gender" not in lexeme or \
+            ((len(lexeme["gender"]["value"]) and lexeme["gender"]["value"].split("#")[-1] == gender)) or \
+            pos == "adjective" or \
+            pos == "adverb":
             entry_wiktionary[lexeme["lexeme"]["value"]] = {
             "lemma": lemma,
             "pos": pos,
@@ -72,4 +75,4 @@ def dbnary_lookup():
    return json.dumps(entry_wiktionary, indent=4)
 
 
-# print(dbnary_lookup())
+# print(dbnary_lookup("ignare", "adjective"))
