@@ -64,8 +64,8 @@ Here are a few examples:
     - proposed relation: **`exact`**
         - *Assemblage de feuilles en nombre plus ou moins élevé, portant des signes destinés à être lus.* (TLF)
         - *Assemblage de feuilles manuscrites ou imprimées destinées à être lues.* (Wiktionnaire) 
-    - proposed relation: **`none`**
-        - *Ouvrage constituant un volume imprimé. * (TLF)
+    - proposed relation: **`none`**  
+        - *Ouvrage constituant un volume imprimé.* (TLF)
         - *Registre destiné à recueillir les signatures et les commentaires des visiteurs.* (Wiktionnaire) 
 
 These type of relations are based on [SKOS's semantic relations](https://www.w3.org/TR/skos-reference/#semantic-relations). It should be noted that the proposed relations are symmetric. Therefore, `R(A, B)` equals with `R(B, A)`, where `R()` refers to the relation between `A` and `B`. 
@@ -84,8 +84,9 @@ Therefore, other types of semantic relations, such as `broader` and `narrower` c
 ## Inter-annotator agreement
 
 As of September 15th, Krippendorff's alpha for the two datasets of the two groups of annotators is as follows:
-    - Group 1 (annotated by Mathieu, Hee-Soo and Bruno): **0.29**. 228 pairs of definitions are annotated.
-    - Group 2 (annotated by Karen and Sina): **0.39**. 227 pairs of definitions are annotated.
+
+- Group 1 (annotated by Mathieu, Hee-Soo and Bruno): **0.29**. 228 pairs of definitions are annotated.
+- Group 2 (annotated by Karen and Sina): **0.39**. 227 pairs of definitions are annotated.
 
 The following figure illustrates heatmaps of how each two annotators perform comparatively: 
 
