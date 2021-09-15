@@ -31,7 +31,9 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-output
+output/else
+output/extracted
+output/extracted_12082021
 resources
 tlfi 
 */__pycache__/

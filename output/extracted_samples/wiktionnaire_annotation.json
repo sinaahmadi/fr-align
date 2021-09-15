@@ -1,0 +1,190 @@
+[
+    {
+        "http://kaiko.getalp.org/dbnary/fra/idyllique__adj__1": {
+            "gender": "",
+            "lemma": "idyllique",
+            "pos": "adjective",
+            "senses": {
+                "http://kaiko.getalp.org/dbnary/fra/__ws_2_idyllique__adj__1": "Qui rappelle l\u2019idylle par le d\u00e9cor champ\u00eatre, l\u2019amour tendre."
+            }
+        }
+    },
+    {
+        "http://kaiko.getalp.org/dbnary/fra/judiciaire__adj__1": {
+            "gender": "",
+            "lemma": "judiciaire",
+            "pos": "adjective",
+            "senses": {
+                "http://kaiko.getalp.org/dbnary/fra/__ws_2_judiciaire__adj__1": "Relatif au d\u00e9roulement d\u2019un proc\u00e8s."
+            }
+        }
+    },
+    {
+        "http://kaiko.getalp.org/dbnary/fra/pr\u00e9historique__adj__1": {
+            "gender": "",
+            "lemma": "pr\u00e9historique",
+            "pos": "adjective",
+            "senses": {
+                "http://kaiko.getalp.org/dbnary/fra/__ws_1_pr\u00e9historique__adj__1": "Relatif \u00e0 la pr\u00e9histoire."
+            }
+        }
+    },
+    {
+        "http://kaiko.getalp.org/dbnary/fra/excitable__adj__1": {
+            "gender": "",
+            "lemma": "excitable",
+            "pos": "adjective",
+            "senses": {
+                "http://kaiko.getalp.org/dbnary/fra/__ws_1_excitable__adj__1": "Qui est susceptible d\u2019\u00eatre excit\u00e9."
+            }
+        }
+    },
+    {
+        "http://kaiko.getalp.org/dbnary/fra/irr\u00e9futable__adj__1": {
+            "gender": "",
+            "lemma": "irr\u00e9futable",
+            "pos": "adjective",
+            "senses": {
+                "http://kaiko.getalp.org/dbnary/fra/__ws_1_irr\u00e9futable__adj__1": "Qui n\u2019est pas susceptible de r\u00e9futation, qui ne peut \u00eatre contredit."
+            }
+        }
+    },
+    {
+        "http://kaiko.getalp.org/dbnary/fra/p\u00e9renne__adj__1": {
+            "gender": "",
+            "lemma": "p\u00e9renne",
+            "pos": "adjective",
+            "senses": {
+                "http://kaiko.getalp.org/dbnary/fra/__ws_1_p\u00e9renne__adj__1": "Qui dure toujours, qui dure toute l\u2019ann\u00e9e."
+            }
+        }
+    },
+    {
+        "http://kaiko.getalp.org/dbnary/fra/objectif__adj__1": {
+            "gender": "",
+            "lemma": "objectif",
+            "pos": "adjective",
+            "senses": {
+                "http://kaiko.getalp.org/dbnary/fra/__ws_1_objectif__adj__1": "Qui concerne l\u2019objet."
+            }
+        }
+    },
+    {
+        "http://kaiko.getalp.org/dbnary/fra/spl\u00e9nique__adj__1": {
+            "gender": "",
+            "lemma": "spl\u00e9nique",
+            "pos": "adjective",
+            "senses": {
+                "http://kaiko.getalp.org/dbnary/fra/__ws_1_spl\u00e9nique__adj__1": "(Anatomie) Qui appartient \u00e0 la rate, relatif \u00e0 la rate."
+            }
+        }
+    },
+    {
+        "http://kaiko.getalp.org/dbnary/fra/interm\u00e9diaire__adj__1": {
+            "gender": "",
+            "lemma": "interm\u00e9diaire",
+            "pos": "adjective",
+            "senses": {
+                "http://kaiko.getalp.org/dbnary/fra/__ws_2_interm\u00e9diaire__adj__1": "(G\u00e9ologie) Qualifie des terrains plac\u00e9s entre les roches des \u00e9poques primitives et les couches de formation r\u00e9cente."
+            }
+        }
+    },
+    {
+        "http://kaiko.getalp.org/dbnary/fra/rapace__adj__1": {
+            "gender": "",
+            "lemma": "rapace",
+            "pos": "adjective",
+            "senses": {
+                "http://kaiko.getalp.org/dbnary/fra/__ws_2_rapace__adj__1": "(Figur\u00e9) Qui est \u00e2pre au gain, avide de butin."
+            }
+        }
+    },
+    {
+        "http://kaiko.getalp.org/dbnary/fra/sain__adj__1": {
+            "gender": "",
+            "lemma": "sain",
+            "pos": "adjective",
+            "senses": {
+                "http://kaiko.getalp.org/dbnary/fra/__ws_1_sain__adj__1": "Qui est de bonne constitution, qui n\u2019a pas de tares en son organisme. Qui n\u2019est pas alt\u00e9r\u00e9, qui est en bon \u00e9tat."
+            }
+        }
+    },
+    {
+        "http://kaiko.getalp.org/dbnary/fra/elliptique__adj__1": {
+            "gender": "",
+            "lemma": "elliptique",
+            "pos": "adjective",
+            "senses": {
+                "http://kaiko.getalp.org/dbnary/fra/__ws_2_elliptique__adj__1": "(Astronomie, G\u00e9om\u00e9trie, M\u00e9canique) Qui a la forme de l\u2019ellipse."
+            }
+        }
+    },
+    {
+        "http://kaiko.getalp.org/dbnary/fra/expiatoire__adj__1": {
+            "gender": "",
+            "lemma": "expiatoire",
+            "pos": "adjective",
+            "senses": {
+                "http://kaiko.getalp.org/dbnary/fra/__ws_1_expiatoire__adj__1": "Qui est destin\u00e9 \u00e0 une expiation religieuse."
+            }
+        }
+    },
+    {
+        "http://kaiko.getalp.org/dbnary/fra/infatigable__adj__1": {
+            "gender": "",
+            "lemma": "infatigable",
+            "pos": "adjective",
+            "senses": {
+                "http://kaiko.getalp.org/dbnary/fra/__ws_1_infatigable__adj__1": "Qui ne peut \u00eatre fatigu\u00e9 par le travail, par la peine."
+            }
+        }
+    },
+    {
+        "http://kaiko.getalp.org/dbnary/fra/inutile__adj__1": {
+            "gender": "",
+            "lemma": "inutile",
+            "pos": "adjective",
+            "senses": {
+                "http://kaiko.getalp.org/dbnary/fra/__ws_3_inutile__adj__1": "(Par extension) Dont on n\u2019emploie pas les talents, les services."
+            }
+        }
+    },
+    {
+        "http://kaiko.getalp.org/dbnary/fra/mineur__adj__1": {
+            "gender": "",
+            "lemma": "mineur",
+            "pos": "adjective",
+            "senses": {
+                "http://kaiko.getalp.org/dbnary/fra/__ws_1_mineur__adj__1": "Qui est moindre, plus petit."
+            }
+        },
+        "http://kaiko.getalp.org/dbnary/fra/mineur__adj__2": {
+            "gender": "",
+            "lemma": "mineur",
+            "pos": "adjective",
+            "senses": {
+                "http://kaiko.getalp.org/dbnary/fra/__ws_1_mineur__adj__2": "Qui concerne les mines ou le creusage de galeries (dans la terre ou dans les feuilles, en parlant d\u2019un animal)."
+            }
+        }
+    },
+    {
+        "http://kaiko.getalp.org/dbnary/fra/ignare__adj__1": {
+            "gender": "",
+            "lemma": "ignare",
+            "pos": "adjective",
+            "senses": {
+                "http://kaiko.getalp.org/dbnary/fra/__ws_1_ignare__adj__1": "Qui est d\u2019une ignorance excessive."
+            }
+        }
+    },
+    {
+        "http://kaiko.getalp.org/dbnary/fra/magnanime__adj__1": {
+            "gender": "",
+            "lemma": "magnanime",
+            "pos": "adjective",
+            "senses": {
+                "http://kaiko.getalp.org/dbnary/fra/__ws_1_magnanime__adj__1": "Qui a de la grandeur, de la force d'\u00e2me."
+            }
+        }
+    }
+]

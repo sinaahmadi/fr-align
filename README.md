@@ -70,8 +70,26 @@ Here are a few examples:
 
 These type of relations are based on [SKOS's semantic relations](https://www.w3.org/TR/skos-reference/#semantic-relations). It should be noted that the proposed relations are symmetric. Therefore, `R(A, B)` equals with `R(B, A)`, where `R()` refers to the relation between `A` and `B`. 
 
-In order to evaluate the level of (dis)agreement among annotators, we will then calculate an inter-annotator agreement such as [Fleis's Kappa](https://en.wikipedia.org/wiki/Fleiss%27_kappa).
+🆕 (update on Sep. 15th) Given the complexity of some sense distinctions, particularly those that may be annotated as **`related`** or **`exact`**, we follow the definitions of exact and related according to [SKOS Simple Knowledge Organization System (SKOS)](https://www.w3.org/TR/skos-reference). Based on this data model, **`related`** and **`exact`** are respectively equivalent to `skos:related` and `skos:exactMatch`. The followings shows the hierarchy of properties in this data model:
 
+![SKOS mapping properties](SKOS_mapping_properties.png)
+
+Therefore, other types of semantic relations, such as `broader` and `narrower` can be considered as `related` as they are subclasses of that property (not to be confused with `skos:relatedMatch`). According to [Section 10.6.1. in the reference](https://www.w3.org/TR/skos-reference/#mapping), mapping properties `skos:broadMatch`, `skos:narrowMatch` and `skos:relatedMatch` are provided for a more fine-grained organization of concepts arguing that:
+
+> The rationale behind this design is that it is hard to draw an absolute distinction between internal links within a concept scheme and mapping links between concept schemes. This is especially true in an open environment where different people might re-organize concepts into concept schemes in different ways. What one person views as two concept schemes with mapping links between, another might view as one single concept scheme with internal links only. This specification allows both points of view to co-exist, which (it is hoped) will promote flexibility and innovation in the re-use of SKOS data in the Web. 
+
+<!-- In order to evaluate the level of (dis)agreement among annotators, we will then calculate an inter-annotator agreement such as [Fleis's Kappa](https://en.wikipedia.org/wiki/Fleiss%27_kappa). -->
+
+
+## Inter-annotator agreement
+
+As of September 15th, Krippendorff's alpha for the two datasets of the two groups of annotators is as follows:
+    - Group 1 (annotated by Mathieu, Hee-Soo and Bruno): **0.29**. 228 pairs of definitions are annotated.
+    - Group 2 (annotated by Karen and Sina): **0.39**. 227 pairs of definitions are annotated.
+
+The following figure illustrates heatmaps of how each two annotators perform comparatively: 
+
+![annotation_confusion_matrices](output/combined_images.jpg)
 
 ## Alignment techniques
 

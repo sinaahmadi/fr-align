@@ -1,0 +1,226 @@
+[
+    {
+        "gender": "",
+        "id": "42729",
+        "lemma": "idyllique",
+        "pos": "adverb",
+        "senses": {
+            "B._UND-2": "Qui tient de l'idylle par le d\u00e9cor, la vie champ\u00eatre, la beaut\u00e9 de la nature.",
+            "B._UND-3": "Empreint d'un sentiment tendre et id\u00e9al.",
+            "B._UND-4": "Qui rel\u00e8ve du r\u00eave.",
+            "UND-1": "Relatif \u00e0 l'idylle, au genre litt\u00e9raire qu'elle constitue."
+        }
+    },
+    {
+        "gender": "",
+        "id": "46811",
+        "lemma": "judiciaire",
+        "pos": "adverb",
+        "senses": {
+            "B._UND-2": "Acte qui est accompli en justice sous la surveillance du juge :",
+            "B._UND-3": "Bail d'un h\u00e9ritage saisi r\u00e9ellement, fait \u00e0 la poursuite du commissaire aux saisies r\u00e9elles. On disait, dans un sens analogue,",
+            "B._UND-4": "Celui des trois genres d'\u00e9loquence par lequel on accuse ou l'on d\u00e9fend.",
+            "B._UND-5": "Toute personne appel\u00e9e \u00e0 d\u00e9poser en justice",
+            "C._UND-7": "Art de conna\u00eetre, de pr\u00e9dire l'avenir par l'observation, l'\u00e9tude et la connaissance des astres, c'est-\u00e0-dire par le jugement, par opposition \u00e0 l'astrologie naturelle ou astronomie.",
+            "C._UND-8": "Facult\u00e9 de jugement, de discernement, d'appr\u00e9ciation.",
+            "UND-1": "Qui se rapporte \u00e0 la Justice, \u00e0 l'administration de la Justice.",
+            "UND-6": "Qui se fait en justice; qui est ordonn\u00e9 par d\u00e9cision, par voie, par autorit\u00e9 de justice; qui a lieu, se produit au cours d'une action en justice.",
+            "UND-9": "Qui est relatif au jugement (v. ce mot D 1)."
+        }
+    },
+    {
+        "gender": "",
+        "id": "68094",
+        "lemma": "pr\u00e9historique",
+        "pos": "adverb",
+        "senses": {
+            "B._UND-2": "Qui vivait \u00e0 l'\u00e9poque de la pr\u00e9histoire.",
+            "B._UND-3": "Qui concerne la pr\u00e9histoire, s'int\u00e9resse \u00e0 elle comme objet d'\u00e9tudes.",
+            "B._UND-4": "Qui date de la pr\u00e9histoire; qui remonte \u00e0 cette \u00e9poque.",
+            "UND-1": "Ant\u00e9rieur \u00e0 l'apparition des t\u00e9moignages \u00e9crits et \u00e0 l'emploi des m\u00e9taux.",
+            "UND-5": "Relatif \u00e0 la pr\u00e9histoire.",
+            "UND-6": "Tr\u00e8s ancien, surann\u00e9, pass\u00e9 de mode."
+        }
+    },
+    {
+        "gender": "",
+        "id": "32892",
+        "lemma": "excitable",
+        "pos": "adverb",
+        "senses": {
+            "UND-1": "Qui se laisse facilement exciter, qui r\u00e9agit fortement (\u00e0 une action ext\u00e9rieure, \u00e9motion, situation, etc.).",
+            "UND-2": "Qui est capable d'entrer en activit\u00e9 et de r\u00e9agir sous l'action d'un agent externe ou interne.",
+            "UND_1": "Qui est susceptible d'\u00eatre excit\u00e9."
+        }
+    },
+    {
+        "gender": "",
+        "id": "45943",
+        "lemma": "irr\u00e9futable",
+        "pos": "adverb",
+        "senses": {
+            "A._UND-1": "Que l'on ne peut juridiquement contester.",
+            "UND-3": "Que l'on ne peut ni discuter, ni remettre en question par une contre-proposition.",
+            "UND-4": "Que l'on ne peut contredire, dont on ne peut mettre en doute la parole ou les actes.",
+            "UND_1": "Que l'on ne peut r\u00e9futer."
+        }
+    },
+    {
+        "gender": "",
+        "id": "62591",
+        "lemma": "p\u00e9renne",
+        "pos": "adverb",
+        "senses": {
+            "UND_1": "Qui dure toujours, qui dure depuis tr\u00e8s longtemps."
+        }
+    },
+    {
+        "gender": "masculine",
+        "id": "57546",
+        "lemma": "objectif",
+        "pos": "noun",
+        "senses": {
+            "UND-1": "Point ou espace d\u00e9fini contre lequel est dirig\u00e9e une op\u00e9ration militaire.",
+            "UND-2": "But d\u00e9termin\u00e9 d'une action."
+        }
+    },
+    {
+        "gender": "",
+        "id": "80534",
+        "lemma": "spl\u00e9nique",
+        "pos": "adverb",
+        "senses": {
+            "UND_1": "Qui appartient ou qui se rapporte \u00e0 la rate."
+        }
+    },
+    {
+        "gender": "",
+        "id": "45386",
+        "lemma": "interm\u00e9diaire",
+        "pos": "adverb",
+        "senses": {
+            "II._A._2.UND-3": "Par l'entremise de quelqu'un; \u00e0 l'aide, au moyen de quelque chose.",
+            "II._A._2.UND-4": "Sans l'aide de quelqu'un ou de quelque chose :",
+            "II._A._UND-2": "Ce qui est plac\u00e9 entre deux termes, qui occupe une situation moyenne; ce qui \u00e9tablit un lien, une jonction.",
+            "II._B._UND-7": "Personne qui sert de lien entre plusieurs autres, qui les met en rapport.",
+            "II._B._UND-8": "Agent \u00e9conomique se pla\u00e7ant entre le producteur et le consommateur et pr\u00e9levant une marge dans le processus de distribution des produits et services",
+            "II._UND-9": "ou",
+            "UND-1": "Qui est plac\u00e9 entre deux termes, qui occupe une situation moyenne."
+        }
+    },
+    {
+        "gender": "masculine",
+        "id": "71478",
+        "lemma": "rapace",
+        "pos": "noun",
+        "senses": {
+            "I._B._UND-3": "[ ; en parlant d'un sentiment, d'un comportement]",
+            "I._UND-1": "Vorace, avide, ardent \u00e0 poursuivre sa proie.",
+            "I._UND-4": "Avide de gain, de profit, le plus souvent au d\u00e9triment d'autrui.",
+            "II._UND-6": "Ordre d'oiseaux de proie pourvus d'un bec fort et crochu et de serres puissantes.",
+            "II._UND-7": "Oiseau appartenant \u00e0 cet ordre."
+        }
+    },
+    {
+        "gender": "masculine",
+        "id": "76122",
+        "lemma": "sain",
+        "pos": "noun",
+        "senses": {
+            "UND_1": "Graisse du sanglier et des b\u00eates mordantes (loups et renards). ("
+        }
+    },
+    {
+        "gender": "",
+        "id": "29545",
+        "lemma": "elliptique",
+        "pos": "adverb",
+        "senses": {
+            "A._3.UND-3": "Cas d'un objet qu'on ne con\u00e7oit pas sans un autre auquel il est habituellement associ\u00e9 (...) en grec on exprime par le duel du mot l'id\u00e9e des jumeaux r\u00e9unis",
+            "A._3.UND-4": "Celui qui suppose qu'avec les objets nomm\u00e9ment d\u00e9sign\u00e9s sont group\u00e9s d'autres objets en vertu d'une sorte d'assimilation abusive : en lat. on trouve employ\u00e9 pour signifier \u00ab le p\u00e8re et la m\u00e8re\u00bb",
+            "A._UND-1": "[En parlant d'un \u00e9nonc\u00e9]",
+            "A._UND-2": "[En parlant d'une langue]",
+            "UND_1": "Qui comporte une ou plusieurs ellipses"
+        }
+    },
+    {
+        "gender": "",
+        "id": "33106",
+        "lemma": "expiatoire",
+        "pos": "adverb",
+        "senses": {
+            "A._UND-1": "Qui est destin\u00e9 au rite de l'expiation.",
+            "A._UND-2": "Qui r\u00e9pare, aux yeux de Dieu, les p\u00e9ch\u00e9s commis.",
+            "UND-3": "Qui sert \u00e0 expier une faute dans le cadre du rite pr\u00e9vu \u00e0 cet effet.",
+            "UND-4": "Qui expie, qui permet d'expier."
+        }
+    },
+    {
+        "gender": "",
+        "id": "44433",
+        "lemma": "infatigable",
+        "pos": "adverb",
+        "senses": {
+            "UND-1": "Dont le rendement ne diminue pas; dont la puissance ne s'affaiblit pas.",
+            "UND-2": "Que rien ne peut lasser ou d\u00e9courager, qui semble insensible \u00e0 la fatigue.",
+            "UND_1": "Qui n'\u00e9prouve pas ou semble ne pas \u00e9prouver de fatigue; que la fatigue n'atteint pas."
+        }
+    },
+    {
+        "gender": "",
+        "id": "45673",
+        "lemma": "inutile",
+        "pos": "adverb",
+        "senses": {
+            "I._A._2.UND-2": "Qui n'apporte rien, ne sert \u00e0 rien.",
+            "I._A._2.UND-3": "Qui n'a pas de justification ext\u00e9rieure, qui n'existe pas en fonction d'un but d\u00e9termin\u00e9.",
+            "I._A._UND-1": "[Qualifie un objet, une r\u00e9alit\u00e9 concr.]",
+            "I._A._UND-4": "[Qualifie une r\u00e9alit\u00e9 abstr.]",
+            "I._A._UND-5": "Que l'on effectue en vain, qui n'obtient aucun r\u00e9sultat.",
+            "I._C._UND-8": "Il ne sert \u00e0 rien, ce n'est pas la peine de/que.",
+            "I._C._UND-9": "Qu'il est inutile de.",
+            "I._UND-6": "[Sans compl.]",
+            "I._UND-7": "[Avec compl. pr\u00e9p. marquant le but, la destination]",
+            "II._UND-13": "[Sans compl.]",
+            "II._UND-14": "[Avec compl. pr\u00e9p. marquant le but, la destination]",
+            "UND-12": "Qui ne pr\u00e9sente pas d'utilit\u00e9 pratique, dont on n'a pas l'usage.",
+            "UND-16": "Qui n'accomplit aucun travail utile, qui ne rend pas (ou plus) de services."
+        }
+    },
+    {
+        "gender": "masculine",
+        "id": "53366",
+        "lemma": "mineur",
+        "pos": "noun",
+        "senses": {
+            "II.UND-2": "Soldat charg\u00e9 de creuser une galerie sous un ouvrage afin d'en saper les fondations et d'en provoquer l'effondrement.",
+            "II.UND-3": "Ouvrier ou militaire charg\u00e9 de poser des mines.",
+            "UND-1": "Ouvrier qui travaille dans une mine et plus particuli\u00e8rement dans une mine de charbon, ouvrier d'abattage."
+        }
+    },
+    {
+        "gender": "",
+        "id": "42759",
+        "lemma": "ignare",
+        "pos": "adverb",
+        "senses": {
+            "UND-2": "Qui manque d'instruction, de culture; qui est profond\u00e9ment ignorant.",
+            "UND-3": "Qui d\u00e9note un manque de connaissances, d'instruction."
+        }
+    },
+    {
+        "gender": "",
+        "id": "50113",
+        "lemma": "magnanime",
+        "pos": "adverb",
+        "senses": {
+            "A._UND-1": "[En parlant d'une pers.]",
+            "A._UND-2": "[En parlant d'un attribut de la pers., d'un comportement]",
+            "A._UND-3": "[D\u00e9signe une pers.]",
+            "B._UND-7": "[En parlant d'une pers.]",
+            "B._UND-8": "[En parlant d'un comportement, d'une action]",
+            "UND-6": "Qui a de la magnanimit\u00e9, de la grandeur et de la force d'\u00e2me.",
+            "UND-9": "Qui fait preuve de cl\u00e9mence, de g\u00e9n\u00e9rosit\u00e9, d'indulgence envers l'ennemi vaincu, le faible."
+        }
+    }
+]
