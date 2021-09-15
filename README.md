@@ -92,6 +92,10 @@ The following figure illustrates heatmaps of how each two annotators perform com
 
 ![annotation_confusion_matrices](output/combined_images.jpg)
 
+Here are the comparison of the annotations of [group_1](output/annotation/Groupe_1_all.tsv) and [group_2](output/annotation/Groupe_2_all.tsv).
+
+
+
 ## Alignment techniques
 
 
