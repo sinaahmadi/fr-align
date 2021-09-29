@@ -2,11 +2,8 @@
 import json
 import xmltodict
 import os
-import string
 import csv
-import shortuuid
-shortuuid.set_alphabet(string.digits)
-
+import re
 """
 Sina Ahmadi - July 2021
 This script converts TLFi into a josn file where each entry is structured as follows:
@@ -48,16 +45,19 @@ def retrieve_pos(tlf_pos):
 		print(list(set(pos_tags)))
 		# print(tlf_pos_mapper_inverse["noun"])
 
-	pos_mapper = {"adv": "adverb", "adj": "adjective", "subst": "noun", "verbe": "verb"}
+	pos_mapper = {"adj": "adjective", "adv": "adverb", "subst": "noun"} # , "verbe": "verb"
 	gender_mapper = {"fém": "feminine", "masc": "masculine"}
 
-	for p in pos_mapper:
-		if pos in tlf_pos:
-			pos = pos_mapper[p]
+	if "verbe" in tlf_pos and "adv" not in tlf_pos:
+		pos = "verb"
+	else:
+		for p in pos_mapper:
+			if pos in tlf_pos:
+				pos = pos_mapper[p]
 
-	for g in gender_mapper:
-		if g in tlf_pos:
-			gender = gender_mapper[g]
+		for g in gender_mapper:
+			if g in tlf_pos:
+				gender = gender_mapper[g]
 
 	return pos, gender
 
@@ -73,11 +73,17 @@ def convert_to_json():
 
 def clean_tlf(text):
 	# cleans senses in TLFi
-	# TO DO: ":" at the end to be removed
-	# TO DO: remove brackets at the beginning and at the end
+	# ":" at the end to be removed (28/09/2021)
+	# remove sense that appear with brackets at the beginning and at the end (!!!)
 	if type(text) != str:
 		return False
-	return " ".join(text.replace("\n", " ").replace(",,", "").replace("„", "").replace("`` (", "").split())
+	else:
+		text = " ".join(text.replace("\n", " ").replace(",,", "").replace("„", "").replace("`` (", "").split())
+		text = re.sub(r" :$", "", text).strip()
+		text = re.sub("^\[.*\]$", "", text)
+		if len(text) > 5:
+			return text
+		return False
 
 def extract_def(sync_H_H):
 	"""
@@ -299,12 +305,12 @@ def extract_tlfi():
 							microstructure["pos"], microstructure["gender"] = retrieve_pos(microstructure["pos"])
 							if len(microstructure["gender"]):
 								microstructure["pos"] = "noun"
-							microstructure["senses"] = {s: clean_tlf(senses[s]) for s in senses} # clean
+							microstructure["senses"] = {s: clean_tlf(senses[s]) for s in senses if clean_tlf(senses[s])} # clean
 							# if False not in microstructure["senses"]:
 							dictionary.append(microstructure)
 							print()
-							for i in microstructure["senses"]:
-								print(i, microstructure["senses"][i])
+							# for i in microstructure["senses"]:
+							# 	print(i, microstructure["senses"][i])
 
 					except:
 						print("An exception occurred")
@@ -346,7 +352,6 @@ def tlfi_lookup(word, pos):
 # extract_tlfi()
 # merge_json_files()
 # print(tlfi_lookup("mur", "noun"))
-# print(tlfi_lookup("bannir", "verb"))
 # print(tlfi_lookup("bannir", "verb"))
 # print(tlfi_lookup("unique", "adjective"))
 # print(tlfi_lookup("inhabituel", "adjective"))

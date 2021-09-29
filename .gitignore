@@ -34,6 +34,8 @@ Temporary Items
 output/else
 output/extracted
 output/extracted_12082021
+output/naisc/tlf_all_cleaned_converted.ttl
+output/extracted_backup/
 resources
 tlfi 
 */__pycache__/

@@ -1,0 +1,445 @@
+@prefix ontolex: <http://www.w3.org/ns/lemon/ontolex#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lime: <http://www.w3.org/ns/lemon/lime#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix contact: <http://www.w3.org/2000/10/swap/pim/contact#> .
+
+<https://sinaahmadi.github.io/> 
+  rdf:type contact:Person ;
+  contact:fullName "Sina Ahmadi" ;
+  contact:homePage <https://sinaahmadi.github.io/>, <https://github.com/sinaahmadi/fr-align> ;
+  contact:mailbox <mailto:ahmadi.sina@outlook.com> .
+
+<https://fr.wikipedia.org/wiki/Wiktionnaire> a lime:Lexicon ;
+	lime:language "fra" ;
+	dct:language <http://www.lexvo.org/page/iso639-3/fra> ;
+	lime:lexicalEntries "55"^^xsd:integer ;
+	dct:description "Wiktionnaire -- le projet lexicographique de la Wikimedia Foundation"@en ;
+	dct:creator <www.atilf.fr> ;
+	dct:created "2021-07-08"^^xsd:date ;
+	dct:modified "2021-09-28"^^xsd:date .
+
+# ===========================================================================
+
+<http://kaiko.getalp.org/dbnary/fra/chorégraphique__adj__1> a ontolex:LexicalEntry ; 
+		rdfs:label "chorégraphique"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_chorégraphique__adj__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_chorégraphique__adj__1> skos:definition "Qui a rapport à la chorégraphie ou simplement à la danse."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/chorégraphique__adj__1> a ontolex:LexicalEntry ; 
+		rdfs:label "chorégraphique"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_chorégraphique__adj__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_chorégraphique__adj__1> skos:definition "Qui a rapport à la chorégraphie ou simplement à la danse."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/putain__nom__1> a ontolex:LexicalEntry ; 
+		rdfs:label "putain"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_putain__nom__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_putain__nom__1> skos:definition "(Vulgaire) (Péjoratif) Prostituée."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/putain__nom__1> a ontolex:LexicalEntry ; 
+		rdfs:label "putain"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_putain__nom__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_2_putain__nom__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_putain__nom__1> skos:definition "(Vulgaire) (Péjoratif) Prostituée."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_putain__nom__1> skos:definition "(Vulgaire) (Injurieux) Femme de vie dissolue, de mauvaise vie. — (Philippe de Thaon, Bestiaire, 834 ds T.-L.). Note : Souvent renforcé par « sale » ou « grosse » pour renforcer le caractère injurieux."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/atour__nom__1> a ontolex:LexicalEntry ; 
+		rdfs:label "atour"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_2_atour__nom__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_atour__nom__1> skos:definition "Parure de femme"@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/atour__nom__1> a ontolex:LexicalEntry ; 
+		rdfs:label "atour"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_2_atour__nom__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_1_atour__nom__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_atour__nom__1> skos:definition "Parure de femme"@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_atour__nom__1> skos:definition "Sorte de hennin de petite taille porté par les femmes au Moyen Âge."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/atour__nom__1> a ontolex:LexicalEntry ; 
+		rdfs:label "atour"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_2_atour__nom__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_1_atour__nom__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_3_atour__nom__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_atour__nom__1> skos:definition "Parure de femme"@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_atour__nom__1> skos:definition "Sorte de hennin de petite taille porté par les femmes au Moyen Âge."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_3_atour__nom__1> skos:definition "(Par extension) (Au pluriel) Tenue d’apparat."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/gargantua__nom__1> a ontolex:LexicalEntry ; 
+		rdfs:label "gargantua"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_gargantua__nom__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_gargantua__nom__1> skos:definition "(Figuré) (Ironique) Grand mangeur."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/baroque__adj__1> a ontolex:LexicalEntry ; 
+		rdfs:label "baroque"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_2_baroque__adj__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_baroque__adj__1> skos:definition "Irrégulier, en parlant d'une perle."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/baroque__adj__1> a ontolex:LexicalEntry ; 
+		rdfs:label "baroque"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_2_baroque__adj__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_baroque__adj__1> skos:definition "Irrégulier, en parlant d'une perle."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/baroque__adj__1> a ontolex:LexicalEntry ; 
+		rdfs:label "baroque"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_2_baroque__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_4_baroque__adj__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_baroque__adj__1> skos:definition "Irrégulier, en parlant d'une perle."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_4_baroque__adj__1> skos:definition "(Philosophie) Une pensée, un système, une idéologie baroque est une référence à sa complexité structurelle."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/baroque__adj__1> a ontolex:LexicalEntry ; 
+		rdfs:label "baroque"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_2_baroque__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_4_baroque__adj__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_baroque__adj__1> skos:definition "Irrégulier, en parlant d'une perle."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_4_baroque__adj__1> skos:definition "(Philosophie) Une pensée, un système, une idéologie baroque est une référence à sa complexité structurelle."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/baroque__adj__1> a ontolex:LexicalEntry ; 
+		rdfs:label "baroque"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_2_baroque__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_4_baroque__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_1_baroque__adj__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_baroque__adj__1> skos:definition "Irrégulier, en parlant d'une perle."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_4_baroque__adj__1> skos:definition "(Philosophie) Une pensée, un système, une idéologie baroque est une référence à sa complexité structurelle."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_baroque__adj__1> skos:definition "(Histoire de l’Art) Qualifie l’art que l’on situe entre la Renaissance et le classicisme."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/baroque__adj__1> a ontolex:LexicalEntry ; 
+		rdfs:label "baroque"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_2_baroque__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_4_baroque__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_1_baroque__adj__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_baroque__adj__1> skos:definition "Irrégulier, en parlant d'une perle."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_4_baroque__adj__1> skos:definition "(Philosophie) Une pensée, un système, une idéologie baroque est une référence à sa complexité structurelle."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_baroque__adj__1> skos:definition "(Histoire de l’Art) Qualifie l’art que l’on situe entre la Renaissance et le classicisme."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/baroque__adj__1> a ontolex:LexicalEntry ; 
+		rdfs:label "baroque"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_2_baroque__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_4_baroque__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_1_baroque__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_3_baroque__adj__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_baroque__adj__1> skos:definition "Irrégulier, en parlant d'une perle."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_4_baroque__adj__1> skos:definition "(Philosophie) Une pensée, un système, une idéologie baroque est une référence à sa complexité structurelle."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_baroque__adj__1> skos:definition "(Histoire de l’Art) Qualifie l’art que l’on situe entre la Renaissance et le classicisme."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_3_baroque__adj__1> skos:definition "(Par extension) Qui est d’une irrégularité bizarre au sens physique ou au sens moral."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/baroque__adj__1> a ontolex:LexicalEntry ; 
+		rdfs:label "baroque"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_2_baroque__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_4_baroque__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_1_baroque__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_3_baroque__adj__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_baroque__adj__1> skos:definition "Irrégulier, en parlant d'une perle."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_4_baroque__adj__1> skos:definition "(Philosophie) Une pensée, un système, une idéologie baroque est une référence à sa complexité structurelle."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_baroque__adj__1> skos:definition "(Histoire de l’Art) Qualifie l’art que l’on situe entre la Renaissance et le classicisme."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_3_baroque__adj__1> skos:definition "(Par extension) Qui est d’une irrégularité bizarre au sens physique ou au sens moral."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/morfil__nom__1> a ontolex:LexicalEntry ; 
+		rdfs:label "morfil"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_morfil__nom__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_morfil__nom__1> skos:definition "Certaines petites parties d’acier, presque imperceptibles, qui restent au tranchant d’un couteau, d’un rasoir, etc., lorsqu’on les a passés sur la meule, et qu’il faut achever d’enlever par affilage pour se servir utilement de l’instrument."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/morfil__nom__2> a ontolex:LexicalEntry ; 
+		rdfs:label "morfil"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_morfil__nom__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_1_morfil__nom__2>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_morfil__nom__1> skos:definition "Certaines petites parties d’acier, presque imperceptibles, qui restent au tranchant d’un couteau, d’un rasoir, etc., lorsqu’on les a passés sur la meule, et qu’il faut achever d’enlever par affilage pour se servir utilement de l’instrument."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_morfil__nom__2> skos:definition "(Populaire) Défense brute d’éléphant."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/fougeraie__nom__1> a ontolex:LexicalEntry ; 
+		rdfs:label "fougeraie"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_fougeraie__nom__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_fougeraie__nom__1> skos:definition "(Écologie) Peuplement de fougères."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/parallaxe__nom__1> a ontolex:LexicalEntry ; 
+		rdfs:label "parallaxe"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_parallaxe__nom__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_parallaxe__nom__1> skos:definition "(Géométrie) Angle sous lequel on voit perpendiculairement un objet depuis un point donné."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/parallaxe__nom__1> a ontolex:LexicalEntry ; 
+		rdfs:label "parallaxe"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_parallaxe__nom__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_2_parallaxe__nom__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_parallaxe__nom__1> skos:definition "(Géométrie) Angle sous lequel on voit perpendiculairement un objet depuis un point donné."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_parallaxe__nom__1> skos:definition "(Astronomie) Angle formé par le rayon visuel mené d'un point de la surface de la Terre à un astre avec le rayon mené du centre de la Terre à cet astre."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/versatile__adj__1> a ontolex:LexicalEntry ; 
+		rdfs:label "versatile"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_4_versatile__adj__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_4_versatile__adj__1> skos:definition "(En particulier) (Militaire) (Anglicisme) Dans l’armement, qualifie un vecteur capable d’effectuer plusieurs types de missions simultanément grâce à l’emport d’une grande variété d’équipements."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/versatile__adj__1> a ontolex:LexicalEntry ; 
+		rdfs:label "versatile"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_4_versatile__adj__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_4_versatile__adj__1> skos:definition "(En particulier) (Militaire) (Anglicisme) Dans l’armement, qualifie un vecteur capable d’effectuer plusieurs types de missions simultanément grâce à l’emport d’une grande variété d’équipements."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/versatile__adj__1> a ontolex:LexicalEntry ; 
+		rdfs:label "versatile"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_4_versatile__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_1_versatile__adj__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_4_versatile__adj__1> skos:definition "(En particulier) (Militaire) (Anglicisme) Dans l’armement, qualifie un vecteur capable d’effectuer plusieurs types de missions simultanément grâce à l’emport d’une grande variété d’équipements."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_versatile__adj__1> skos:definition "Qui est sujet à tourner, à changer."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/versatile__adj__1> a ontolex:LexicalEntry ; 
+		rdfs:label "versatile"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_4_versatile__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_1_versatile__adj__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_4_versatile__adj__1> skos:definition "(En particulier) (Militaire) (Anglicisme) Dans l’armement, qualifie un vecteur capable d’effectuer plusieurs types de missions simultanément grâce à l’emport d’une grande variété d’équipements."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_versatile__adj__1> skos:definition "Qui est sujet à tourner, à changer."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/versatile__adj__1> a ontolex:LexicalEntry ; 
+		rdfs:label "versatile"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_4_versatile__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_1_versatile__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_3_versatile__adj__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_4_versatile__adj__1> skos:definition "(En particulier) (Militaire) (Anglicisme) Dans l’armement, qualifie un vecteur capable d’effectuer plusieurs types de missions simultanément grâce à l’emport d’une grande variété d’équipements."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_versatile__adj__1> skos:definition "Qui est sujet à tourner, à changer."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_3_versatile__adj__1> skos:definition "(En particulier) (Anglicisme) Pour des objets, qualifie l'adaptabilité à un grand nombre de situations ou d'usages, polyvalent."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/versatile__adj__1> a ontolex:LexicalEntry ; 
+		rdfs:label "versatile"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_4_versatile__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_1_versatile__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_3_versatile__adj__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_4_versatile__adj__1> skos:definition "(En particulier) (Militaire) (Anglicisme) Dans l’armement, qualifie un vecteur capable d’effectuer plusieurs types de missions simultanément grâce à l’emport d’une grande variété d’équipements."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_versatile__adj__1> skos:definition "Qui est sujet à tourner, à changer."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_3_versatile__adj__1> skos:definition "(En particulier) (Anglicisme) Pour des objets, qualifie l'adaptabilité à un grand nombre de situations ou d'usages, polyvalent."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/versatile__adj__1> a ontolex:LexicalEntry ; 
+		rdfs:label "versatile"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_4_versatile__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_1_versatile__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_3_versatile__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_2_versatile__adj__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_4_versatile__adj__1> skos:definition "(En particulier) (Militaire) (Anglicisme) Dans l’armement, qualifie un vecteur capable d’effectuer plusieurs types de missions simultanément grâce à l’emport d’une grande variété d’équipements."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_versatile__adj__1> skos:definition "Qui est sujet à tourner, à changer."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_3_versatile__adj__1> skos:definition "(En particulier) (Anglicisme) Pour des objets, qualifie l'adaptabilité à un grand nombre de situations ou d'usages, polyvalent."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_versatile__adj__1> skos:definition "(En particulier) Qualifie le caractère d’une personne qui change facilement d’avis, qui est trop indécise."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/versatile__adj__1> a ontolex:LexicalEntry ; 
+		rdfs:label "versatile"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_4_versatile__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_1_versatile__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_3_versatile__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_2_versatile__adj__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_4_versatile__adj__1> skos:definition "(En particulier) (Militaire) (Anglicisme) Dans l’armement, qualifie un vecteur capable d’effectuer plusieurs types de missions simultanément grâce à l’emport d’une grande variété d’équipements."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_versatile__adj__1> skos:definition "Qui est sujet à tourner, à changer."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_3_versatile__adj__1> skos:definition "(En particulier) (Anglicisme) Pour des objets, qualifie l'adaptabilité à un grand nombre de situations ou d'usages, polyvalent."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_versatile__adj__1> skos:definition "(En particulier) Qualifie le caractère d’une personne qui change facilement d’avis, qui est trop indécise."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/versatile__adj__1> a ontolex:LexicalEntry ; 
+		rdfs:label "versatile"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_4_versatile__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_1_versatile__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_3_versatile__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_2_versatile__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_5_versatile__adj__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_4_versatile__adj__1> skos:definition "(En particulier) (Militaire) (Anglicisme) Dans l’armement, qualifie un vecteur capable d’effectuer plusieurs types de missions simultanément grâce à l’emport d’une grande variété d’équipements."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_versatile__adj__1> skos:definition "Qui est sujet à tourner, à changer."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_3_versatile__adj__1> skos:definition "(En particulier) (Anglicisme) Pour des objets, qualifie l'adaptabilité à un grand nombre de situations ou d'usages, polyvalent."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_versatile__adj__1> skos:definition "(En particulier) Qualifie le caractère d’une personne qui change facilement d’avis, qui est trop indécise."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_5_versatile__adj__1> skos:definition "(En particulier) Se dit d’une personne pouvant indistinctement être pénétrée ou pénétrer lors d’un rapport sexuel."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/versatile__adj__1> a ontolex:LexicalEntry ; 
+		rdfs:label "versatile"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_4_versatile__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_1_versatile__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_3_versatile__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_2_versatile__adj__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_5_versatile__adj__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_4_versatile__adj__1> skos:definition "(En particulier) (Militaire) (Anglicisme) Dans l’armement, qualifie un vecteur capable d’effectuer plusieurs types de missions simultanément grâce à l’emport d’une grande variété d’équipements."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_versatile__adj__1> skos:definition "Qui est sujet à tourner, à changer."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_3_versatile__adj__1> skos:definition "(En particulier) (Anglicisme) Pour des objets, qualifie l'adaptabilité à un grand nombre de situations ou d'usages, polyvalent."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_versatile__adj__1> skos:definition "(En particulier) Qualifie le caractère d’une personne qui change facilement d’avis, qui est trop indécise."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_5_versatile__adj__1> skos:definition "(En particulier) Se dit d’une personne pouvant indistinctement être pénétrée ou pénétrer lors d’un rapport sexuel."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/surabonder__verb__1> a ontolex:LexicalEntry ; 
+		rdfs:label "surabonder"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_surabonder__verb__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_surabonder__verb__1> skos:definition "Être très abondant, être en quantité plus que suffisante."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/autopompe__nom__1> a ontolex:LexicalEntry ; 
+		rdfs:label "autopompe"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_autopompe__nom__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_autopompe__nom__1> skos:definition "Camion équipé d’une pompe à eau et éventuellement d’une réserve d’eau."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/autopompe__nom__1> a ontolex:LexicalEntry ; 
+		rdfs:label "autopompe"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_autopompe__nom__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_2_autopompe__nom__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_autopompe__nom__1> skos:definition "Camion équipé d’une pompe à eau et éventuellement d’une réserve d’eau."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_autopompe__nom__1> skos:definition "(En particulier) (Belgique) (Québec) Camion de pompier équipé d’une pompe d’incendie et éventuellement d’une réserve d’eau."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/diagnostique__adj__1> a ontolex:LexicalEntry ; 
+		rdfs:label "diagnostique"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_diagnostique__adj__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_diagnostique__adj__1> skos:definition "(Médecine) Qui sert à établir le diagnostic d’une maladie."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/diagnostique__adj__1> a ontolex:LexicalEntry ; 
+		rdfs:label "diagnostique"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_diagnostique__adj__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_diagnostique__adj__1> skos:definition "(Médecine) Qui sert à établir le diagnostic d’une maladie."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/semis__nom__1> a ontolex:LexicalEntry ; 
+		rdfs:label "semis"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_2_semis__nom__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_semis__nom__1> skos:definition "(Agriculture) Plant d’arbrisseaux, de plantes, de fleurs venant de graines."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/semis__nom__1> a ontolex:LexicalEntry ; 
+		rdfs:label "semis"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_2_semis__nom__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_4_semis__nom__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_semis__nom__1> skos:definition "(Agriculture) Plant d’arbrisseaux, de plantes, de fleurs venant de graines."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_4_semis__nom__1> skos:definition "(Art) Ornement répandu, motif fréquemment répété."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/semis__nom__1> a ontolex:LexicalEntry ; 
+		rdfs:label "semis"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_2_semis__nom__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_4_semis__nom__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_1_semis__nom__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_semis__nom__1> skos:definition "(Agriculture) Plant d’arbrisseaux, de plantes, de fleurs venant de graines."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_4_semis__nom__1> skos:definition "(Art) Ornement répandu, motif fréquemment répété."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_semis__nom__1> skos:definition "(Agriculture) Mise en terre des semences ; action de semer."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/semis__nom__1> a ontolex:LexicalEntry ; 
+		rdfs:label "semis"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_2_semis__nom__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_4_semis__nom__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_1_semis__nom__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_5_semis__nom__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_semis__nom__1> skos:definition "(Agriculture) Plant d’arbrisseaux, de plantes, de fleurs venant de graines."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_4_semis__nom__1> skos:definition "(Art) Ornement répandu, motif fréquemment répété."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_semis__nom__1> skos:definition "(Agriculture) Mise en terre des semences ; action de semer."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_5_semis__nom__1> skos:definition "(Cartographie) Canevas constitué par un ensemble de points répartis de façon irrégulière ou quelconque sur une zone géographique donnée."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/semis__nom__1> a ontolex:LexicalEntry ; 
+		rdfs:label "semis"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_2_semis__nom__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_4_semis__nom__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_1_semis__nom__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_5_semis__nom__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_3_semis__nom__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_semis__nom__1> skos:definition "(Agriculture) Plant d’arbrisseaux, de plantes, de fleurs venant de graines."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_4_semis__nom__1> skos:definition "(Art) Ornement répandu, motif fréquemment répété."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_semis__nom__1> skos:definition "(Agriculture) Mise en terre des semences ; action de semer."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_5_semis__nom__1> skos:definition "(Cartographie) Canevas constitué par un ensemble de points répartis de façon irrégulière ou quelconque sur une zone géographique donnée."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_3_semis__nom__1> skos:definition "(Agriculture) Jeunes plants issus de la germination des graines."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/styler__verb__1> a ontolex:LexicalEntry ; 
+		rdfs:label "styler"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_styler__verb__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_styler__verb__1> skos:definition "Former, dresser, habituer."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/râper__verb__1> a ontolex:LexicalEntry ; 
+		rdfs:label "râper"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_râper__verb__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_râper__verb__1> skos:definition "(Cuisine) Réduire en petits morceaux avec une râpe."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/râper__verb__1> a ontolex:LexicalEntry ; 
+		rdfs:label "râper"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_râper__verb__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_3_râper__verb__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_râper__verb__1> skos:definition "(Cuisine) Réduire en petits morceaux avec une râpe."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_3_râper__verb__1> skos:definition "(Figuré) Donner une sensation d’âpreté."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/râper__verb__1> a ontolex:LexicalEntry ; 
+		rdfs:label "râper"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_râper__verb__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_3_râper__verb__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_2_râper__verb__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_râper__verb__1> skos:definition "(Cuisine) Réduire en petits morceaux avec une râpe."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_3_râper__verb__1> skos:definition "(Figuré) Donner une sensation d’âpreté."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_râper__verb__1> skos:definition "User la surface d’un corps avec l’espèce de lime appelée râpe, pour dégrossir cette surface, pour lui donner la forme qu’on veut."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/banjo__nom__1> a ontolex:LexicalEntry ; 
+		rdfs:label "banjo"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_banjo__nom__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_banjo__nom__1> skos:definition "(Musique) Cordophone portable à cordes pincées, à touche garnie de frettes marquant les demi-tons, et à table d’harmonie en membrane de parchemin tendue sur un tambour."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/déblai__nom__1> a ontolex:LexicalEntry ; 
+		rdfs:label "déblai"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_2_déblai__nom__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_déblai__nom__1> skos:definition "Résultat de cette action."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/déblai__nom__1> a ontolex:LexicalEntry ; 
+		rdfs:label "déblai"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_2_déblai__nom__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_1_déblai__nom__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_déblai__nom__1> skos:definition "Résultat de cette action."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_déblai__nom__1> skos:definition "Action d’enlever des terres, des décombres pour mettre un terrain de niveau, pour creuser des fondations, un fossé, etc."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/déblai__nom__1> a ontolex:LexicalEntry ; 
+		rdfs:label "déblai"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_2_déblai__nom__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_1_déblai__nom__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_3_déblai__nom__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_déblai__nom__1> skos:definition "Résultat de cette action."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_déblai__nom__1> skos:definition "Action d’enlever des terres, des décombres pour mettre un terrain de niveau, pour creuser des fondations, un fossé, etc."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_3_déblai__nom__1> skos:definition "Terres mêmes, des décombres qu’on enlève."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/accumuler__verb__1> a ontolex:LexicalEntry ; 
+		rdfs:label "accumuler"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_accumuler__verb__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_accumuler__verb__1> skos:definition "Amasser et mettre ensemble."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/accumuler__verb__1> a ontolex:LexicalEntry ; 
+		rdfs:label "accumuler"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_accumuler__verb__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_2_accumuler__verb__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_accumuler__verb__1> skos:definition "Amasser et mettre ensemble."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_accumuler__verb__1> skos:definition "(Figuré) Collectionner des faits."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/accumuler__verb__1> a ontolex:LexicalEntry ; 
+		rdfs:label "accumuler"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_accumuler__verb__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_2_accumuler__verb__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_3_accumuler__verb__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_accumuler__verb__1> skos:definition "Amasser et mettre ensemble."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_accumuler__verb__1> skos:definition "(Figuré) Collectionner des faits."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_3_accumuler__verb__1> skos:definition "(Figuré) (Pronominal)"@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/accumuler__verb__1> a ontolex:LexicalEntry ; 
+		rdfs:label "accumuler"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_accumuler__verb__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_2_accumuler__verb__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_3_accumuler__verb__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_4_accumuler__verb__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_accumuler__verb__1> skos:definition "Amasser et mettre ensemble."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_accumuler__verb__1> skos:definition "(Figuré) Collectionner des faits."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_3_accumuler__verb__1> skos:definition "(Figuré) (Pronominal)"@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_4_accumuler__verb__1> skos:definition "(Absolument) (Péjoratif) Thésauriser."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/accumuler__verb__1> a ontolex:LexicalEntry ; 
+		rdfs:label "accumuler"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_accumuler__verb__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_2_accumuler__verb__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_3_accumuler__verb__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_4_accumuler__verb__1>, <http://kaiko.getalp.org/dbnary/fra/__ws_5_accumuler__verb__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_accumuler__verb__1> skos:definition "Amasser et mettre ensemble."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_2_accumuler__verb__1> skos:definition "(Figuré) Collectionner des faits."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_3_accumuler__verb__1> skos:definition "(Figuré) (Pronominal)"@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_4_accumuler__verb__1> skos:definition "(Absolument) (Péjoratif) Thésauriser."@fr .
+		<http://kaiko.getalp.org/dbnary/fra/__ws_5_accumuler__verb__1> skos:definition "(Pronominal) S'amasser et se mettre ensemble."@fr .
+
+<http://kaiko.getalp.org/dbnary/fra/psycholinguistique__nom__1> a ontolex:LexicalEntry ; 
+		rdfs:label "psycholinguistique"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <http://kaiko.getalp.org/dbnary/fra/__ws_1_psycholinguistique__nom__1>.
+		<http://kaiko.getalp.org/dbnary/fra/__ws_1_psycholinguistique__nom__1> skos:definition "(Linguistique, Psychologie) Étude des processus cognitifs mis en œuvre dans le traitement et la production du langage."@fr .

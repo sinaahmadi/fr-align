@@ -1,0 +1,1003 @@
+@prefix ontolex: <http://www.w3.org/ns/lemon/ontolex#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lime: <http://www.w3.org/ns/lemon/lime#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix contact: <http://www.w3.org/2000/10/swap/pim/contact#> .
+
+<https://sinaahmadi.github.io/> 
+  rdf:type contact:Person ;
+  contact:fullName "Sina Ahmadi" ;
+  contact:homePage <https://sinaahmadi.github.io/>, <https://github.com/sinaahmadi/fr-align> ;
+  contact:mailbox <mailto:ahmadi.sina@outlook.com> .
+
+<http://atilf.atilf.fr/> a lime:Lexicon ;
+	lime:language "fra" ;
+	dct:language <http://www.lexvo.org/page/iso639-3/fra> ;
+	lime:lexicalEntries "32073"^^xsd:integer ;
+	dct:description "Le Trésor de la Language Française Informatisé (TLFi) in Ontolex-Lemon"@en ;
+	dct:creator <www.atilf.fr> ;
+    dct:created "2021-07-08"^^xsd:date ;
+    dct:modified "2021-09-28"^^xsd:date .
+
+# ===========================================================================
+
+<https://www.cnrtl.fr/definition/18682> a ontolex:LexicalEntry ; 
+		rdfs:label "chorégraphique"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <https://www.cnrtl.fr/definition/18682#UND-1>, <https://www.cnrtl.fr/definition/18682#UND-2>.
+		<https://www.cnrtl.fr/definition/18682#UND-1> skos:definition "Relatif à la chorégraphie ( B)."@fr .
+		<https://www.cnrtl.fr/definition/18682#UND-2> skos:definition "Relatif à la danse"@fr .
+
+<https://www.cnrtl.fr/definition/70025> a ontolex:LexicalEntry ; 
+		rdfs:label "putain"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/70025#A._1.UND-4>, <https://www.cnrtl.fr/definition/70025#A._2.UND-11>, <https://www.cnrtl.fr/definition/70025#A._2.UND-12>, <https://www.cnrtl.fr/definition/70025#A._2.UND-9>, <https://www.cnrtl.fr/definition/70025#A._UND-14>, <https://www.cnrtl.fr/definition/70025#A._UND-15>, <https://www.cnrtl.fr/definition/70025#A._UND-7>, <https://www.cnrtl.fr/definition/70025#B._UND-20>.
+		<https://www.cnrtl.fr/definition/70025#A._1.UND-4> skos:definition "Peine légère infligée par un tribunal correctionnel."@fr .
+		<https://www.cnrtl.fr/definition/70025#A._2.UND-11> skos:definition "Jeune homme séduisant."@fr .
+		<https://www.cnrtl.fr/definition/70025#A._2.UND-12> skos:definition "Très débauché."@fr .
+		<https://www.cnrtl.fr/definition/70025#A._2.UND-9> skos:definition "Femme qui a un amant."@fr .
+		<https://www.cnrtl.fr/definition/70025#A._UND-14> skos:definition "Femme de murs faciles ou qui se livre à la débauche."@fr .
+		<https://www.cnrtl.fr/definition/70025#A._UND-15> skos:definition "Qui veut plaire à tout le monde, qui suit n'importe quel parti, qui manque d'amour-propre, de sens moral."@fr .
+		<https://www.cnrtl.fr/definition/70025#A._UND-7> skos:definition "Prostituée qui exerce son métier dans la rue ou en maison de tolérance."@fr .
+		<https://www.cnrtl.fr/definition/70025#B._UND-20> skos:definition "désignant une personne, une chose, une situation que l'on maudit, méprise, qui irrite ou plus rarement que l'on envie."@fr .
+
+<https://www.cnrtl.fr/definition/9731> a ontolex:LexicalEntry ; 
+		rdfs:label "atour"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/9731#A._1.UND-1>, <https://www.cnrtl.fr/definition/9731#A._1.UND-2>, <https://www.cnrtl.fr/definition/9731#A._1.UND-3>, <https://www.cnrtl.fr/definition/9731#A._UND-4>, <https://www.cnrtl.fr/definition/9731#B._UND-6>.
+		<https://www.cnrtl.fr/definition/9731#A._1.UND-1> skos:definition "Toilette de femme noble."@fr .
+		<https://www.cnrtl.fr/definition/9731#A._1.UND-2> skos:definition "Dame ou demoiselle qui présidait à la toilette de la reine ou des princesses."@fr .
+		<https://www.cnrtl.fr/definition/9731#A._1.UND-3> skos:definition "Femme chargée de l'entretien des robes et parures de la reine ou des princesses"@fr .
+		<https://www.cnrtl.fr/definition/9731#A._UND-4> skos:definition "siècles."@fr .
+		<https://www.cnrtl.fr/definition/9731#B._UND-6> skos:definition "Tout ce qui entre dans la parure des femmes; parure riche et/ou surannée."@fr .
+
+<https://www.cnrtl.fr/definition/36862> a ontolex:LexicalEntry ; 
+		rdfs:label "gargantua"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/36862#UND_1>.
+		<https://www.cnrtl.fr/definition/36862#UND_1> skos:definition "Gros mangeur."@fr .
+
+<https://www.cnrtl.fr/definition/11597> a ontolex:LexicalEntry ; 
+		rdfs:label "baroque"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <https://www.cnrtl.fr/definition/11597#A._1.UND-1>, <https://www.cnrtl.fr/definition/11597#A._1.UND-2>, <https://www.cnrtl.fr/definition/11597#A._1.UND-3>, <https://www.cnrtl.fr/definition/11597#A._3.UND-6>, <https://www.cnrtl.fr/definition/11597#UND-9>.
+		<https://www.cnrtl.fr/definition/11597#A._1.UND-1> skos:definition "Qui est caractéristique de la période qui a suivi la Renaissance classique."@fr .
+		<https://www.cnrtl.fr/definition/11597#A._1.UND-2> skos:definition "Qui est caractéristique de la période musicale propre à l'Allemagne, à l'Angleterre, à l'Italie, et qui s'étend de 1580 à 1760."@fr .
+		<https://www.cnrtl.fr/definition/11597#A._1.UND-3> skos:definition "Qui appartient à l'époque littéraire qui, en France, correspond aux règnes de Henri IV et Louis XIII."@fr .
+		<https://www.cnrtl.fr/definition/11597#A._3.UND-6> skos:definition "Artiste dont le style rappelle cette période"@fr .
+		<https://www.cnrtl.fr/definition/11597#UND-9> skos:definition "Qui est de forme irrégulière, d'une rondeur imparfaite"@fr .
+
+<https://www.cnrtl.fr/definition/54455> a ontolex:LexicalEntry ; 
+		rdfs:label "morfil"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/54455#B._UND-2>, <https://www.cnrtl.fr/definition/54455#B._UND-3>, <https://www.cnrtl.fr/definition/54455#UND-1>.
+		<https://www.cnrtl.fr/definition/54455#B._UND-2> skos:definition "Ensemble des petites barbes métalliques sur les bords du corps du burin."@fr .
+		<https://www.cnrtl.fr/definition/54455#B._UND-3> skos:definition "Ensemble de barbes laissées sur la plaque de cuivre par le burin ou la pointe du graveur ("@fr .
+		<https://www.cnrtl.fr/definition/54455#UND-1> skos:definition "Ensemble des particules et petites aspérités métalliques qui se forment sur le bord du tranchant d'une lame fraîchement affûtée."@fr .
+
+<https://www.cnrtl.fr/definition/35368> a ontolex:LexicalEntry ; 
+		rdfs:label "fougeraie"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/35368#UND_1>.
+		<https://www.cnrtl.fr/definition/35368#UND_1> skos:definition "Lieu où croissent des fougères."@fr .
+
+<https://www.cnrtl.fr/definition/60809> a ontolex:LexicalEntry ; 
+		rdfs:label "parallaxe"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/60809#A._3.UND-3>, <https://www.cnrtl.fr/definition/60809#A._3.UND-4>, <https://www.cnrtl.fr/definition/60809#A._UND-1>, <https://www.cnrtl.fr/definition/60809#A._UND-2>, <https://www.cnrtl.fr/definition/60809#A._UND-6>, <https://www.cnrtl.fr/definition/60809#B._UND-11>, <https://www.cnrtl.fr/definition/60809#UND-12>, <https://www.cnrtl.fr/definition/60809#UND-7>.
+		<https://www.cnrtl.fr/definition/60809#A._3.UND-3> skos:definition "Angle formé par les axes visuels d'une personne qui fixe un point quelconque d'un objet"@fr .
+		<https://www.cnrtl.fr/definition/60809#A._3.UND-4> skos:definition "Différence apparente dans la position d'un objet lorsqu'il est regardé par l'un ou l'autre oeil séparément, la position de la tête de l'observateur demeurant la même"@fr .
+		<https://www.cnrtl.fr/definition/60809#A._UND-1> skos:definition "Angle pouvant exister entre la direction du regard d'un observateur et la perpendiculaire à une graduation amenant une lecture inexacte de la mesure faite"@fr .
+		<https://www.cnrtl.fr/definition/60809#A._UND-2> skos:definition "Différences de cadrage entre l'image visée et l'image enregistrée"@fr .
+		<https://www.cnrtl.fr/definition/60809#A._UND-6> skos:definition "Différence de coordonnées."@fr .
+		<https://www.cnrtl.fr/definition/60809#B._UND-11> skos:definition "Petit angle sous lequel est observée la longueur connue d'une stadia"@fr .
+		<https://www.cnrtl.fr/definition/60809#UND-12> skos:definition "Angle sous lequel on voit perpendiculairement depuis un point donné, un objet donné."@fr .
+		<https://www.cnrtl.fr/definition/60809#UND-7> skos:definition "Incidence du changement de position de l'observateur sur l'observation d'un objet."@fr .
+
+<https://www.cnrtl.fr/definition/27453> a ontolex:LexicalEntry ; 
+		rdfs:label "dispersoïde"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/27453#UND_1>.
+		<https://www.cnrtl.fr/definition/27453#UND_1> skos:definition "Ensemble d'un système en général composé de deux phases : solide et gaz, solide et liquide, liquide et liquide, qui paraissent homogènes"@fr .
+
+<https://www.cnrtl.fr/definition/89621> a ontolex:LexicalEntry ; 
+		rdfs:label "versatile"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <https://www.cnrtl.fr/definition/89621#UND-1>, <https://www.cnrtl.fr/definition/89621#UND-2>.
+		<https://www.cnrtl.fr/definition/89621#UND-1> skos:definition "Qui provoque ou subit un mouvement alternatif d'un côté, puis d'un autre."@fr .
+		<https://www.cnrtl.fr/definition/89621#UND-2> skos:definition "Qui change souvent et aisément de parti, d'opinion; qui est sujet à de brusques revirements."@fr .
+
+<https://www.cnrtl.fr/definition/82319> a ontolex:LexicalEntry ; 
+		rdfs:label "surabonder"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <https://www.cnrtl.fr/definition/82319#B._UND-2>, <https://www.cnrtl.fr/definition/82319#UND-1>.
+		<https://www.cnrtl.fr/definition/82319#B._UND-2> skos:definition "Être en très grande quantité ou en excès."@fr .
+		<https://www.cnrtl.fr/definition/82319#UND-1> skos:definition "Avoir en très grande quantité ou en excès."@fr .
+
+<https://www.cnrtl.fr/definition/10433> a ontolex:LexicalEntry ; 
+		rdfs:label "autopompe"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/10433#UND_1>.
+		<https://www.cnrtl.fr/definition/10433#UND_1> skos:definition "Véhicule automobile équipé d'une pompe à incendie"@fr .
+
+<https://www.cnrtl.fr/definition/26933> a ontolex:LexicalEntry ; 
+		rdfs:label "diagnostique"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <https://www.cnrtl.fr/definition/26933#I._UND-1>, <https://www.cnrtl.fr/definition/26933#I._UND-2>, <https://www.cnrtl.fr/definition/26933#II._UND-4>, <https://www.cnrtl.fr/definition/26933#II._UND-5>.
+		<https://www.cnrtl.fr/definition/26933#I._UND-1> skos:definition "Qui permet d'identifier une maladie."@fr .
+		<https://www.cnrtl.fr/definition/26933#I._UND-2> skos:definition "Qui ressortit à un diagnostic."@fr .
+		<https://www.cnrtl.fr/definition/26933#II._UND-4> skos:definition "Science qui permet d'établir un diagnostic."@fr .
+		<https://www.cnrtl.fr/definition/26933#II._UND-5> skos:definition "Signe, symptôme."@fr .
+
+<https://www.cnrtl.fr/definition/77889> a ontolex:LexicalEntry ; 
+		rdfs:label "semis"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/77889#A._2.UND-2>, <https://www.cnrtl.fr/definition/77889#A._2.UND-3>, <https://www.cnrtl.fr/definition/77889#A._UND-1>, <https://www.cnrtl.fr/definition/77889#B._2.UND-6>, <https://www.cnrtl.fr/definition/77889#B._2.UND-7>, <https://www.cnrtl.fr/definition/77889#B._UND-5>.
+		<https://www.cnrtl.fr/definition/77889#A._2.UND-2> skos:definition "Terre ensemencée."@fr .
+		<https://www.cnrtl.fr/definition/77889#A._2.UND-3> skos:definition "Ce qui a été, ou est semé."@fr .
+		<https://www.cnrtl.fr/definition/77889#A._UND-1> skos:definition "Action de semer."@fr .
+		<https://www.cnrtl.fr/definition/77889#B._2.UND-6> skos:definition "Répétition régulière sur plusieurs lignes, d'un motif, selon divers agencements"@fr .
+		<https://www.cnrtl.fr/definition/77889#B._2.UND-7> skos:definition "s., et présentant, sur les plats, la reproduction régulière et symétrique d'un même motif de petites dimensions: symbole, initiales"@fr .
+		<https://www.cnrtl.fr/definition/77889#B._UND-5> skos:definition "Ensemble de choses dispersées sur une surface."@fr .
+
+<https://www.cnrtl.fr/definition/81345> a ontolex:LexicalEntry ; 
+		rdfs:label "styler"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <https://www.cnrtl.fr/definition/81345#A._1.UND-3>, <https://www.cnrtl.fr/definition/81345#A._1.UND-4>, <https://www.cnrtl.fr/definition/81345#A._1.a)UND-2>, <https://www.cnrtl.fr/definition/81345#A._UND-5>, <https://www.cnrtl.fr/definition/81345#A._UND-6>, <https://www.cnrtl.fr/definition/81345#UND-7>.
+		<https://www.cnrtl.fr/definition/81345#A._1.UND-3> skos:definition "Apprendre à quelqu'un la manière dont il doit s'y prendre pour exécuter une fonction, un travail selon certaines règles."@fr .
+		<https://www.cnrtl.fr/definition/81345#A._1.UND-4> skos:definition "Exercer à procéder d'une certaine façon."@fr .
+		<https://www.cnrtl.fr/definition/81345#A._1.a)UND-2> skos:definition "Former quelqu'un au service domestique."@fr .
+		<https://www.cnrtl.fr/definition/81345#A._UND-5> skos:definition "Inculquer à quelqu'un les bonnes manières, l'astreindre à façonner sa conduite selon certains principes d'éducation."@fr .
+		<https://www.cnrtl.fr/definition/81345#A._UND-6> skos:definition "Faire la leçon à quelqu'un pour l'amener à s'exprimer, à se comporter d'une manière convenue par avance, afin de servir certains intérêts, généralement contraires à la vérité, à l'honnêteté."@fr .
+		<https://www.cnrtl.fr/definition/81345#UND-7> skos:definition "Donner du style, une expression originale, élégante à quelque chose."@fr .
+
+<https://www.cnrtl.fr/definition/71492> a ontolex:LexicalEntry ; 
+		rdfs:label "râper"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <https://www.cnrtl.fr/definition/71492#C._UND-3>, <https://www.cnrtl.fr/definition/71492#C._UND-4>, <https://www.cnrtl.fr/definition/71492#UND-1>, <https://www.cnrtl.fr/definition/71492#UND-2>.
+		<https://www.cnrtl.fr/definition/71492#C._UND-3> skos:definition "Irriter la peau par frottement avec une matière rugueuse."@fr .
+		<https://www.cnrtl.fr/definition/71492#C._UND-4> skos:definition "Irriter la gorge, le palais, la langue."@fr .
+		<https://www.cnrtl.fr/definition/71492#UND-1> skos:definition "User la surface d'un corps que l'on frotte avec une râpe."@fr .
+		<https://www.cnrtl.fr/definition/71492#UND-2> skos:definition "Réduire en poudre, en pulpe ou en petits morceaux à l'aide d'une râpe à main ou mécanique."@fr .
+
+<https://www.cnrtl.fr/definition/11363> a ontolex:LexicalEntry ; 
+		rdfs:label "banjo"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/11363#UND_1>.
+		<https://www.cnrtl.fr/definition/11363#UND_1> skos:definition "Instrument à cordes pincées, proche de la guitare, formé d'un long manche et d'une caisse ronde tendue de peau"@fr .
+
+<https://www.cnrtl.fr/definition/24404> a ontolex:LexicalEntry ; 
+		rdfs:label "déblai"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/24404#UND-1>, <https://www.cnrtl.fr/definition/24404#UND-2>.
+		<https://www.cnrtl.fr/definition/24404#UND-1> skos:definition "Action d'enlever des décombres pour niveler ou abaisser le sol."@fr .
+		<https://www.cnrtl.fr/definition/24404#UND-2> skos:definition "Débarras de ce qui encombre."@fr .
+
+<https://www.cnrtl.fr/definition/959> a ontolex:LexicalEntry ; 
+		rdfs:label "accumuler"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <https://www.cnrtl.fr/definition/959#UND_1>.
+		<https://www.cnrtl.fr/definition/959#UND_1> skos:definition "R?nir progressivement et en vue d'une utilisation pr?ise un ensemble important de choses ou d'??ents constitutifs d'une chose."@fr .
+
+<https://www.cnrtl.fr/definition/69619> a ontolex:LexicalEntry ; 
+		rdfs:label "psycholinguistique"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/69619#UND-1>, <https://www.cnrtl.fr/definition/69619#UND-2>.
+		<https://www.cnrtl.fr/definition/69619#UND-1> skos:definition "Science qui étudie les rapports entre les structures linguistiques et les processus psychologiques de production et de compréhension d'énoncés."@fr .
+		<https://www.cnrtl.fr/definition/69619#UND-2> skos:definition "Qui relève de cette science."@fr .
+
+<https://www.cnrtl.fr/definition/41789> a ontolex:LexicalEntry ; 
+		rdfs:label "hybridité"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/41789#A._UND-1>, <https://www.cnrtl.fr/definition/41789#A._UND-2>, <https://www.cnrtl.fr/definition/41789#UND-3>.
+		<https://www.cnrtl.fr/definition/41789#A._UND-1> skos:definition "Condition d'hybride animal ou végétal."@fr .
+		<https://www.cnrtl.fr/definition/41789#A._UND-2> skos:definition "État des mots qui ont subi l'hybridation."@fr .
+		<https://www.cnrtl.fr/definition/41789#UND-3> skos:definition "Caractère de ce qui a une origine, une composition mal définie."@fr .
+
+<https://www.cnrtl.fr/definition/27244> a ontolex:LexicalEntry ; 
+		rdfs:label "dinosaurien"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/27244#UND_1>.
+		<https://www.cnrtl.fr/definition/27244#UND_1> skos:definition "Ordre de reptiles terrestres ayant vécu à l'ère secondaire, qui comprend des animaux de tailles diverses à corps massif, longue queue."@fr .
+
+<https://www.cnrtl.fr/definition/71689> a ontolex:LexicalEntry ; 
+		rdfs:label "rationnement"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/71689#UND_1>.
+		<https://www.cnrtl.fr/definition/71689#UND_1> skos:definition "Action de rationner; résultat de cette action."@fr .
+
+<https://www.cnrtl.fr/definition/30450> a ontolex:LexicalEntry ; 
+		rdfs:label "endommager"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <https://www.cnrtl.fr/definition/30450#UND-3>, <https://www.cnrtl.fr/definition/30450#UND-4>.
+		<https://www.cnrtl.fr/definition/30450#UND-3> skos:definition "Mettre en mauvais état."@fr .
+		<https://www.cnrtl.fr/definition/30450#UND-4> skos:definition "Porter atteinte à (quelque chose)."@fr .
+
+<https://www.cnrtl.fr/definition/54815> a ontolex:LexicalEntry ; 
+		rdfs:label "mouler"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <https://www.cnrtl.fr/definition/54815#A._1.UND-3>, <https://www.cnrtl.fr/definition/54815#A._1.UND-4>, <https://www.cnrtl.fr/definition/54815#A._1.UND-5>, <https://www.cnrtl.fr/definition/54815#A._1.a)UND-2>, <https://www.cnrtl.fr/definition/54815#A._UND-6>, <https://www.cnrtl.fr/definition/54815#B._1.UND-7>, <https://www.cnrtl.fr/definition/54815#B._1.UND-8>, <https://www.cnrtl.fr/definition/54815#B._UND-9>.
+		<https://www.cnrtl.fr/definition/54815#A._1.UND-3> skos:definition "Obtenir ou reproduire (un objet) à l'aide d'un moule creux, en coulant une matière dans ce moule."@fr .
+		<https://www.cnrtl.fr/definition/54815#A._1.UND-4> skos:definition "Faire entrer dans (un cadre déterminé, une forme fixe)."@fr .
+		<https://www.cnrtl.fr/definition/54815#A._1.UND-5> skos:definition "Façonner suivant un modèle; adapter à."@fr .
+		<https://www.cnrtl.fr/definition/54815#A._1.a)UND-2> skos:definition "Donner une forme à, à l'aide d'un moule creux; faire prendre à (quelque chose) la forme d'un moule."@fr .
+		<https://www.cnrtl.fr/definition/54815#A._UND-6> skos:definition "Former des caractères d'écriture de façon soignée et régulière."@fr .
+		<https://www.cnrtl.fr/definition/54815#B._1.UND-7> skos:definition "Reproduire (un objet plein) en y appliquant une substance plus ou moins liquide qui en prenne la forme, l'empreinte en creux, en se solidifiant."@fr .
+		<https://www.cnrtl.fr/definition/54815#B._1.UND-8> skos:definition "Former sur (un modèle)."@fr .
+		<https://www.cnrtl.fr/definition/54815#B._UND-9> skos:definition "Épouser étroitement les contours de, marquer les formes de."@fr .
+
+<https://www.cnrtl.fr/definition/79714> a ontolex:LexicalEntry ; 
+		rdfs:label "soude"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/79714#A._UND-1>, <https://www.cnrtl.fr/definition/79714#A._UND-2>, <https://www.cnrtl.fr/definition/79714#B._UND-4>, <https://www.cnrtl.fr/definition/79714#B._UND-5>, <https://www.cnrtl.fr/definition/79714#UND-3>, <https://www.cnrtl.fr/definition/79714#UND-6>.
+		<https://www.cnrtl.fr/definition/79714#A._UND-1> skos:definition "Cendre de cette plante utilisée pour laver le linge."@fr .
+		<https://www.cnrtl.fr/definition/79714#A._UND-2> skos:definition "Cendre de varech riche en carbonate de sodium et en iode. ("@fr .
+		<https://www.cnrtl.fr/definition/79714#B._UND-4> skos:definition "); substance riche en carbonate de sodium."@fr .
+		<https://www.cnrtl.fr/definition/79714#B._UND-5> skos:definition "Hydroxyde de sodium ("@fr .
+		<https://www.cnrtl.fr/definition/79714#UND-3> skos:definition "Plante de la famille des Salsolacées, poussant le long des rivages marins des pays tempérés, dont les cendres sont riches en carbonate de sodium."@fr .
+		<https://www.cnrtl.fr/definition/79714#UND-6> skos:definition "Carbonate ou hydroxyde de sodium."@fr .
+
+<https://www.cnrtl.fr/definition/29700> a ontolex:LexicalEntry ; 
+		rdfs:label "embouquer"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <https://www.cnrtl.fr/definition/29700#UND_1>.
+		<https://www.cnrtl.fr/definition/29700#UND_1> skos:definition "S'engager dans une bouque*."@fr .
+
+<https://www.cnrtl.fr/definition/80752> a ontolex:LexicalEntry ; 
+		rdfs:label "stannifère"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <https://www.cnrtl.fr/definition/80752#A._UND-1>, <https://www.cnrtl.fr/definition/80752#UND_1>.
+		<https://www.cnrtl.fr/definition/80752#A._UND-1> skos:definition "Titre d'actionnaire de mines d'étain."@fr .
+		<https://www.cnrtl.fr/definition/80752#UND_1> skos:definition "Qui contient de l'étain."@fr .
+
+<https://www.cnrtl.fr/definition/23531> a ontolex:LexicalEntry ; 
+		rdfs:label "cuisinière"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/23531#UND_1>.
+		<https://www.cnrtl.fr/definition/23531#UND_1> skos:definition "Appareil muni d'une ou plusieurs surfaces chauffantes et d'un four, servant à cuire les aliments."@fr .
+
+<https://www.cnrtl.fr/definition/21821> a ontolex:LexicalEntry ; 
+		rdfs:label "contresens"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/21821#B._UND-4>, <https://www.cnrtl.fr/definition/21821#UND-3>.
+		<https://www.cnrtl.fr/definition/21821#B._UND-4> skos:definition "Interpr?ation contraire au sens v?itable d'un texte."@fr .
+		<https://www.cnrtl.fr/definition/21821#UND-3> skos:definition "Direction, sens inverse d'une premi?e direction, du sens ? normal ?."@fr .
+
+<https://www.cnrtl.fr/definition/16154> a ontolex:LexicalEntry ; 
+		rdfs:label "caramboler"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <https://www.cnrtl.fr/definition/16154#A._UND-1>, <https://www.cnrtl.fr/definition/16154#UND-3>, <https://www.cnrtl.fr/definition/16154#UND-6>.
+		<https://www.cnrtl.fr/definition/16154#A._UND-1> skos:definition "Faire coup double."@fr .
+		<https://www.cnrtl.fr/definition/16154#UND-3> skos:definition "Toucher du même coup deux billes avec la sienne."@fr .
+		<https://www.cnrtl.fr/definition/16154#UND-6> skos:definition "Heurter quelqu'un ou quelque chose."@fr .
+
+<https://www.cnrtl.fr/definition/78425> a ontolex:LexicalEntry ; 
+		rdfs:label "sextuor"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/78425#A._UND-1>, <https://www.cnrtl.fr/definition/78425#A._UND-2>, <https://www.cnrtl.fr/definition/78425#UND-3>.
+		<https://www.cnrtl.fr/definition/78425#A._UND-1> skos:definition "uvre, morceau écrit pour six instruments, six voix."@fr .
+		<https://www.cnrtl.fr/definition/78425#A._UND-2> skos:definition "Ensemble de six musiciens, de six chanteurs."@fr .
+		<https://www.cnrtl.fr/definition/78425#UND-3> skos:definition "Ensemble de six personnes."@fr .
+
+<https://www.cnrtl.fr/definition/69962> a ontolex:LexicalEntry ; 
+		rdfs:label "pupillaire"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <https://www.cnrtl.fr/definition/69962#UND-1>, <https://www.cnrtl.fr/definition/69962#UND-2>.
+		<https://www.cnrtl.fr/definition/69962#UND-1> skos:definition "Membrane très fine, qui continue à l'uvée, ferme la pupille dans les ftus humains, avant le septième mois, se déchire et disparaît ensuite ("@fr .
+		<https://www.cnrtl.fr/definition/69962#UND-2> skos:definition "Contraction des pupilles sous l'influence d'un rayon lumineux ou de l'accommodation"@fr .
+
+<https://www.cnrtl.fr/definition/47728> a ontolex:LexicalEntry ; 
+		rdfs:label "lapidaire"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <https://www.cnrtl.fr/definition/47728#UND-1>, <https://www.cnrtl.fr/definition/47728#UND-2>.
+		<https://www.cnrtl.fr/definition/47728#UND-1> skos:definition "Qui a rapport aux pierres."@fr .
+		<https://www.cnrtl.fr/definition/47728#UND-2> skos:definition "Qui frappe d'une manière percutante, comme un jet de pierres."@fr .
+
+<https://www.cnrtl.fr/definition/7744> a ontolex:LexicalEntry ; 
+		rdfs:label "âprement"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <https://www.cnrtl.fr/definition/7744#UND_1>.
+		<https://www.cnrtl.fr/definition/7744#UND_1> skos:definition "D'une manière âpre."@fr .
+
+<https://www.cnrtl.fr/definition/31479> a ontolex:LexicalEntry ; 
+		rdfs:label "epsilon"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/31479#B._1.UND-2>, <https://www.cnrtl.fr/definition/31479#B._UND-3>, <https://www.cnrtl.fr/definition/31479#B._UND-4>.
+		<https://www.cnrtl.fr/definition/31479#B._1.UND-2> skos:definition "Symbole d'une quantité infinitésimale que l'on fait tendre vers zéro."@fr .
+		<https://www.cnrtl.fr/definition/31479#B._UND-3> skos:definition "Symbole dans diverses techniques, notamment en médecine, physique, etc."@fr .
+		<https://www.cnrtl.fr/definition/31479#B._UND-4> skos:definition "Signe conventionnel ayant le sens de ou"@fr .
+
+<https://www.cnrtl.fr/definition/38994> a ontolex:LexicalEntry ; 
+		rdfs:label "gratuité"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/38994#A._UND-1>, <https://www.cnrtl.fr/definition/38994#A._UND-2>, <https://www.cnrtl.fr/definition/38994#B._UND-3>, <https://www.cnrtl.fr/definition/38994#B._UND-4>, <https://www.cnrtl.fr/definition/38994#UND_1>.
+		<https://www.cnrtl.fr/definition/38994#A._UND-1> skos:definition "Caractère de ce qui est fait ou donné, de ce dont on peut profiter sans contrepartie pécuniaire."@fr .
+		<https://www.cnrtl.fr/definition/38994#A._UND-2> skos:definition "Caractère de ce qui est fait ou donné sans contrepartie, sans recherche de compensation."@fr .
+		<https://www.cnrtl.fr/definition/38994#B._UND-3> skos:definition "Caractère de ce qui ne repose sur rien, de ce qui n'est pas fondé, justifié."@fr .
+		<https://www.cnrtl.fr/definition/38994#B._UND-4> skos:definition "Caractère de ce qui est fait sans but déterminé, de ce qui constitue une fin en soi; caractère de ce qui ne sert à rien."@fr .
+		<https://www.cnrtl.fr/definition/38994#UND_1> skos:definition "Fait d'être gratuit."@fr .
+
+<https://www.cnrtl.fr/definition/35267> a ontolex:LexicalEntry ; 
+		rdfs:label "formuer"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <https://www.cnrtl.fr/definition/35267#UND_1>.
+		<https://www.cnrtl.fr/definition/35267#UND_1> skos:definition "Faire passer la mue à un oiseau"@fr .
+
+<https://www.cnrtl.fr/definition/90591> a ontolex:LexicalEntry ; 
+		rdfs:label "voltampère"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/90591#UND_1>.
+		<https://www.cnrtl.fr/definition/90591#UND_1> skos:definition "Unité du système international pour la mesure de la puissance apparente dans les circuits parcourus par un courant alternatif (symb. ) ( VA"@fr .
+
+<https://www.cnrtl.fr/definition/73097> a ontolex:LexicalEntry ; 
+		rdfs:label "réité"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/73097#UND_1>.
+		<https://www.cnrtl.fr/definition/73097#UND_1> skos:definition "Caractère matériel, réalité."@fr .
+
+<https://www.cnrtl.fr/definition/27667> a ontolex:LexicalEntry ; 
+		rdfs:label "docimasie"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/27667#UND-1>, <https://www.cnrtl.fr/definition/27667#UND-2>, <https://www.cnrtl.fr/definition/27667#UND-3>.
+		<https://www.cnrtl.fr/definition/27667#UND-1> skos:definition "Examen auquel étaient soumis, à Athènes, tous les fonctionnaires"@fr .
+		<https://www.cnrtl.fr/definition/27667#UND-2> skos:definition "Étude des minerais, qui consiste à déterminer la qualité et la quantité de métaux utiles qu'ils contiennent"@fr .
+		<https://www.cnrtl.fr/definition/27667#UND-3> skos:definition "Épreuves auxquelles on soumet l'appareil respiratoire d'un ftus pour savoir s'il a respiré avant de mourir"@fr .
+
+<https://www.cnrtl.fr/definition/8773> a ontolex:LexicalEntry ; 
+		rdfs:label "arrondissement"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/8773#A._UND-2>, <https://www.cnrtl.fr/definition/8773#B._2.UND-5>, <https://www.cnrtl.fr/definition/8773#B._UND-7>, <https://www.cnrtl.fr/definition/8773#UND-10>, <https://www.cnrtl.fr/definition/8773#UND-3>, <https://www.cnrtl.fr/definition/8773#UND-8>, <https://www.cnrtl.fr/definition/8773#UND_1>.
+		<https://www.cnrtl.fr/definition/8773#A._UND-2> skos:definition "Qualité des phonèmes qu'on prononce en arrondissant les lèvres (d'où le nom plus usité de *), par exemple d'un dont le timbre tend vers (fr. popul. )"@fr .
+		<https://www.cnrtl.fr/definition/8773#B._2.UND-5> skos:definition "Subdivision administrative, etc., d'une grande ville, surtout de Paris"@fr .
+		<https://www.cnrtl.fr/definition/8773#B._UND-7> skos:definition "Action de supprimer ou d'ajouter des unités en finale, de façon à former un chiffre rond; résultat de cette action"@fr .
+		<https://www.cnrtl.fr/definition/8773#UND-10> skos:definition "Action de donner, de prendre plus de force, d'harmonie; fait de se circonscrire dans les limites d'une perfection particulière, parfois trop recherchée et trop exclusive."@fr .
+		<https://www.cnrtl.fr/definition/8773#UND-3> skos:definition "Action de donner, de prendre ou fait de présenter une forme (approximativement) ronde."@fr .
+		<https://www.cnrtl.fr/definition/8773#UND-8> skos:definition "Action de donner, de prendre une certaine extension de façon à former un ensemble satisfaisant; résultat de cette action."@fr .
+		<https://www.cnrtl.fr/definition/8773#UND_1> skos:definition "Action d'arrondir, de s'arrondir; état de ce qui est arrondi."@fr .
+
+<https://www.cnrtl.fr/definition/46124> a ontolex:LexicalEntry ; 
+		rdfs:label "isorel"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/46124#UND_1>.
+		<https://www.cnrtl.fr/definition/46124#UND_1> skos:definition "Matériau obtenu à partir de la fibre de bois compressée et utilisé en menuiserie sous forme de panneaux pour fabriquer des cloisons, des plafonds, des meubles"@fr .
+
+<https://www.cnrtl.fr/definition/18896> a ontolex:LexicalEntry ; 
+		rdfs:label "chrysoprase"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/18896#UND_1>.
+		<https://www.cnrtl.fr/definition/18896#UND_1> skos:definition "Calcédoine de couleur vert pâle due à des traces de nickel."@fr .
+
+<https://www.cnrtl.fr/definition/73618> a ontolex:LexicalEntry ; 
+		rdfs:label "repentance"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/73618#A._UND-1>, <https://www.cnrtl.fr/definition/73618#A._UND-2>, <https://www.cnrtl.fr/definition/73618#UND-3>.
+		<https://www.cnrtl.fr/definition/73618#A._UND-1> skos:definition "Regret douloureux que l'on a de ses péchés, de ses fautes et désir de se racheter; , manifestation de cette attitude."@fr .
+		<https://www.cnrtl.fr/definition/73618#A._UND-2> skos:definition "Regret d'une action quelconque."@fr .
+		<https://www.cnrtl.fr/definition/73618#UND-3> skos:definition "Sans changement de résolution."@fr .
+
+<https://www.cnrtl.fr/definition/27442> a ontolex:LexicalEntry ; 
+		rdfs:label "dispensation"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/27442#UND_1>.
+		<https://www.cnrtl.fr/definition/27442#UND_1> skos:definition "Action, fait de dispenser ( ce mot B), de distribuer. cf."@fr .
+
+<https://www.cnrtl.fr/definition/15032> a ontolex:LexicalEntry ; 
+		rdfs:label "butyle"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/15032#B._UND-2>, <https://www.cnrtl.fr/definition/15032#B._UND-3>, <https://www.cnrtl.fr/definition/15032#UND-1>.
+		<https://www.cnrtl.fr/definition/15032#B._UND-2> skos:definition ") dont il existe quatre isomères; élément de nombreux composés utilisés dans des domaines divers (pharmacie, cosmétique, etc.)."@fr .
+		<https://www.cnrtl.fr/definition/15032#B._UND-3> skos:definition "Caoutchouc artificiel (par abréviation du composé )."@fr .
+		<https://www.cnrtl.fr/definition/15032#UND-1> skos:definition "), liquide incolore et oléagineux."@fr .
+
+<https://www.cnrtl.fr/definition/69389> a ontolex:LexicalEntry ; 
+		rdfs:label "prunelaie"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/69389#UND_1>.
+		<https://www.cnrtl.fr/definition/69389#UND_1> skos:definition "Lieu planté de pruniers"@fr .
+
+<https://www.cnrtl.fr/definition/27035> a ontolex:LexicalEntry ; 
+		rdfs:label "dichroïque"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <https://www.cnrtl.fr/definition/27035#UND-1>, <https://www.cnrtl.fr/definition/27035#UND-2>.
+		<https://www.cnrtl.fr/definition/27035#UND-1> skos:definition "Qui présente le phénomène de dichroïsme"@fr .
+		<https://www.cnrtl.fr/definition/27035#UND-2> skos:definition "Qui résulte du phénomène de dichroïsme."@fr .
+
+<https://www.cnrtl.fr/definition/81602> a ontolex:LexicalEntry ; 
+		rdfs:label "succomber"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <https://www.cnrtl.fr/definition/81602#B._2.UND-19>, <https://www.cnrtl.fr/definition/81602#B._2.UND-20>, <https://www.cnrtl.fr/definition/81602#B._2.a)UND-17>, <https://www.cnrtl.fr/definition/81602#B._2.a)UND-18>, <https://www.cnrtl.fr/definition/81602#B._3.UND-26>, <https://www.cnrtl.fr/definition/81602#B._3.UND-29>, <https://www.cnrtl.fr/definition/81602#B._3.b)UND-27>, <https://www.cnrtl.fr/definition/81602#B._UND-16>, <https://www.cnrtl.fr/definition/81602#B._UND-21>, <https://www.cnrtl.fr/definition/81602#B._UND-30>, <https://www.cnrtl.fr/definition/81602#C._UND-38>, <https://www.cnrtl.fr/definition/81602#C._UND-42>, <https://www.cnrtl.fr/definition/81602#UND-5>.
+		<https://www.cnrtl.fr/definition/81602#B._2.UND-19> skos:definition "Se laisser aller à un état, un sentiment après avoir vainement lutté."@fr .
+		<https://www.cnrtl.fr/definition/81602#B._2.UND-20> skos:definition "Se laisser aller, céder à une sollicitation, à l'attrait de quelque chose, de quelqu'un; se laisser séduire par quelque chose, quelqu'un."@fr .
+		<https://www.cnrtl.fr/definition/81602#B._2.a)UND-17> skos:definition "Tomber dans."@fr .
+		<https://www.cnrtl.fr/definition/81602#B._2.a)UND-18> skos:definition "Se laisser aller à un penchant coupable, funeste, etc. (dont la nature est suggérée par le cont. ou un compl. prép.)."@fr .
+		<https://www.cnrtl.fr/definition/81602#B._3.UND-26> skos:definition "Subir une défaite dans une bataille, dans une lutte."@fr .
+		<https://www.cnrtl.fr/definition/81602#B._3.UND-29> skos:definition "Céder, se donner à un homme après avoir essayé de résister."@fr .
+		<https://www.cnrtl.fr/definition/81602#B._3.b)UND-27> skos:definition "Échouer dans ce que l'on entreprend."@fr .
+		<https://www.cnrtl.fr/definition/81602#B._UND-16> skos:definition "Être profondément éprouvé, perdre ses forces (physiques et/ou morales), son intégrité, ses capacités sous l'effet d'une épreuve, de difficultés."@fr .
+		<https://www.cnrtl.fr/definition/81602#B._UND-21> skos:definition "Ne pas pouvoir résister, s'opposer à quelque chose."@fr .
+		<https://www.cnrtl.fr/definition/81602#B._UND-30> skos:definition "Être vaincu."@fr .
+		<https://www.cnrtl.fr/definition/81602#C._UND-38> skos:definition "Mourir (par suite de quelque chose, sous l'effet de quelque chose)."@fr .
+		<https://www.cnrtl.fr/definition/81602#C._UND-42> skos:definition "Disparaître, être anéanti, ruiné par quelqu'un."@fr .
+		<https://www.cnrtl.fr/definition/81602#UND-5> skos:definition "Fléchir, s'affaisser, s'écrouler sous un poids, une charge qu'on n'a plus la force de soutenir, sous l'effet d'un choc."@fr .
+
+<https://www.cnrtl.fr/definition/27984> a ontolex:LexicalEntry ; 
+		rdfs:label "doxologie"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/27984#UND_1>.
+		<https://www.cnrtl.fr/definition/27984#UND_1> skos:definition "Finale de prières (psaumes, hymnes, collectes, canon de la messe, etc.) à la louange de la Trinité."@fr .
+
+<https://www.cnrtl.fr/definition/78045> a ontolex:LexicalEntry ; 
+		rdfs:label "séparatisme"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/78045#UND-1>, <https://www.cnrtl.fr/definition/78045#UND-2>.
+		<https://www.cnrtl.fr/definition/78045#UND-1> skos:definition "Volonté attribuée à un groupe humain, géographiquement localisé et possédant une homogénéité ethnique, linguistique ou religieuse réelle ou supposée et une tradition historique commune, de se détacher de l'État dont il fait partie pour constituer une entité politique autonome"@fr .
+		<https://www.cnrtl.fr/definition/78045#UND-2> skos:definition "Scission, séparation du spirituel et du temporel; attitude philosophique, doctrine qui l'affirme."@fr .
+
+<https://www.cnrtl.fr/definition/51004> a ontolex:LexicalEntry ; 
+		rdfs:label "marge"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/51004#A._1.UND-1>, <https://www.cnrtl.fr/definition/51004#A._1.b)UND-2>, <https://www.cnrtl.fr/definition/51004#A._1.b)UND-3>, <https://www.cnrtl.fr/definition/51004#A._UND-5>, <https://www.cnrtl.fr/definition/51004#B._1.UND-6>, <https://www.cnrtl.fr/definition/51004#B._1.c)UND-8>, <https://www.cnrtl.fr/definition/51004#B._1.c)UND-9>, <https://www.cnrtl.fr/definition/51004#B._2.UND-11>, <https://www.cnrtl.fr/definition/51004#B._2.UND-12>, <https://www.cnrtl.fr/definition/51004#B._2.UND-15>, <https://www.cnrtl.fr/definition/51004#B._2.c)UND-13>, <https://www.cnrtl.fr/definition/51004#B._2.c)UND-14>, <https://www.cnrtl.fr/definition/51004#C._2.UND-20>, <https://www.cnrtl.fr/definition/51004#C._2.UND-21>, <https://www.cnrtl.fr/definition/51004#C._2.UND-22>, <https://www.cnrtl.fr/definition/51004#C._2.UND-23>, <https://www.cnrtl.fr/definition/51004#C._UND-18>, <https://www.cnrtl.fr/definition/51004#C._UND-24>, <https://www.cnrtl.fr/definition/51004#C._UND-25>.
+		<https://www.cnrtl.fr/definition/51004#A._1.UND-1> skos:definition "Espace vierge laissé entre le pourtour de ce qui est imprimé (texte, gravure) et le bord de la page."@fr .
+		<https://www.cnrtl.fr/definition/51004#A._1.b)UND-2> skos:definition "Feuille placée sur le tympan et servant de repère à celles que l'on tire en blanc. ("@fr .
+		<https://www.cnrtl.fr/definition/51004#A._1.b)UND-3> skos:definition "Feuille de papier placée sous la plaque de cuivre pour servir à marger l'estampe ("@fr .
+		<https://www.cnrtl.fr/definition/51004#A._UND-5> skos:definition "Espace vierge laissé à droite du recto et à gauche du verso d'une page imprimée et (généralement) à gauche d'une page manuscrite."@fr .
+		<https://www.cnrtl.fr/definition/51004#B._1.UND-6> skos:definition "Espace situé sur le pourtour externe immédiat de quelque chose."@fr .
+		<https://www.cnrtl.fr/definition/51004#B._1.c)UND-8> skos:definition "À la périphérie de quelque chose."@fr .
+		<https://www.cnrtl.fr/definition/51004#B._1.c)UND-9> skos:definition "À l'écart de quelque chose."@fr .
+		<https://www.cnrtl.fr/definition/51004#B._2.UND-11> skos:definition "Bordure externe de certains organes ou de certains orifices anatomiques."@fr .
+		<https://www.cnrtl.fr/definition/51004#B._2.UND-12> skos:definition "Espace situé sur le pourtour d'une région considérée comme une unité géographique."@fr .
+		<https://www.cnrtl.fr/definition/51004#B._2.UND-15> skos:definition "Zone latérale d'un système nuageux."@fr .
+		<https://www.cnrtl.fr/definition/51004#B._2.c)UND-13> skos:definition "Partie immergée de la bordure d'un continent faisant le raccord avec les fonds océaniques ("@fr .
+		<https://www.cnrtl.fr/definition/51004#B._2.c)UND-14> skos:definition "Bord du glacier se trouvant au contact avec les reliefs encadrants ("@fr .
+		<https://www.cnrtl.fr/definition/51004#C._2.UND-20> skos:definition "Différence entre le prix de vente et le prix d'achat qui apporte un bénéfice au vendeur."@fr .
+		<https://www.cnrtl.fr/definition/51004#C._2.UND-21> skos:definition "Extension d'un profit escompté."@fr .
+		<https://www.cnrtl.fr/definition/51004#C._2.UND-22> skos:definition "Coût escompté de telle ou telle opération."@fr .
+		<https://www.cnrtl.fr/definition/51004#C._2.UND-23> skos:definition "Avoir, donner, laisser une certaine latitude."@fr .
+		<https://www.cnrtl.fr/definition/51004#C._UND-18> skos:definition "Espace laissé entre la limite de deux choses se côtoyant."@fr .
+		<https://www.cnrtl.fr/definition/51004#C._UND-24> skos:definition "Espace dont on peut disposer entre des limites qui sont imposées."@fr .
+		<https://www.cnrtl.fr/definition/51004#C._UND-25> skos:definition "Extension de quelque chose au delà des limites normalement nécessaires, requises ou prévues."@fr .
+
+<https://www.cnrtl.fr/definition/53418> a ontolex:LexicalEntry ; 
+		rdfs:label "minimum"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/53418#I._B._UND-2>, <https://www.cnrtl.fr/definition/53418#I._B._UND-3>, <https://www.cnrtl.fr/definition/53418#I._B._UND-4>, <https://www.cnrtl.fr/definition/53418#I._B._UND-5>, <https://www.cnrtl.fr/definition/53418#I._UND-1>, <https://www.cnrtl.fr/definition/53418#I._UND-6>, <https://www.cnrtl.fr/definition/53418#I._UND-7>, <https://www.cnrtl.fr/definition/53418#UND-9>.
+		<https://www.cnrtl.fr/definition/53418#I._B._UND-2> skos:definition "Au moins."@fr .
+		<https://www.cnrtl.fr/definition/53418#I._B._UND-3> skos:definition "Abrév. de (ou )."@fr .
+		<https://www.cnrtl.fr/definition/53418#I._B._UND-4> skos:definition "Montant des ressources au-dessous duquel, à un niveau de civilisation matérielle donné, il est considéré comme moralement impossible de mener une vie vraiment humaine ("@fr .
+		<https://www.cnrtl.fr/definition/53418#I._B._UND-5> skos:definition "Pension d'assurance vieillesse qui ne peut être inférieure à une certaine somme."@fr .
+		<https://www.cnrtl.fr/definition/53418#I._UND-1> skos:definition "Valeur la plus petite atteinte par une quantité variable."@fr .
+		<https://www.cnrtl.fr/definition/53418#I._UND-6> skos:definition "Le plus petit nombre, la plus petite quantité."@fr .
+		<https://www.cnrtl.fr/definition/53418#I._UND-7> skos:definition "Degré, niveau le plus bas auquel une chose puisse être abaissée, réduite."@fr .
+		<https://www.cnrtl.fr/definition/53418#UND-9> skos:definition "Au delà duquel/de laquelle on ne peut descendre; qui constitue une limite inférieure."@fr .
+
+<https://www.cnrtl.fr/definition/51783> a ontolex:LexicalEntry ; 
+		rdfs:label "médicament"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/51783#UND-1>, <https://www.cnrtl.fr/definition/51783#UND-2>.
+		<https://www.cnrtl.fr/definition/51783#UND-1> skos:definition "Substance employée à des fins thérapeutiques pour rétablir l'équilibre dans un organisme perturbé."@fr .
+		<https://www.cnrtl.fr/definition/51783#UND-2> skos:definition "Ce qui permet de corriger, d'améliorer."@fr .
+
+<https://www.cnrtl.fr/definition/20741> a ontolex:LexicalEntry ; 
+		rdfs:label "complaisamment"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <https://www.cnrtl.fr/definition/20741#UND-1>, <https://www.cnrtl.fr/definition/20741#UND-2>.
+		<https://www.cnrtl.fr/definition/20741#UND-1> skos:definition "En faisant preuve d'obligeance, de gentillesse"@fr .
+		<https://www.cnrtl.fr/definition/20741#UND-2> skos:definition "En faisant preuve d'une satisfaction qui manque de retenue"@fr .
+
+<https://www.cnrtl.fr/definition/72436> a ontolex:LexicalEntry ; 
+		rdfs:label "reconsidérer"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <https://www.cnrtl.fr/definition/72436#UND_1>.
+		<https://www.cnrtl.fr/definition/72436#UND_1> skos:definition "Considérer de nouveau, revenir sur quelque chose, notamment à la suite de faits nouveaux, en vue de modifier son comportement, ses décisions, ses idées, etc."@fr .
+
+<https://www.cnrtl.fr/definition/62385> a ontolex:LexicalEntry ; 
+		rdfs:label "pentacle"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/62385#UND_1>.
+		<https://www.cnrtl.fr/definition/62385#UND_1> skos:definition "Sceau magique ou talismanique représentant des figures géométriques (le plus souvent une étoile à cinq branches) avec des caractères hébraïques ou cabalistiques, des formules latines, censé symboliser et capter les puissances occultes."@fr .
+
+<https://www.cnrtl.fr/definition/32056> a ontolex:LexicalEntry ; 
+		rdfs:label "essence"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/32056#A._2.UND-2>, <https://www.cnrtl.fr/definition/32056#A._2.UND-3>, <https://www.cnrtl.fr/definition/32056#A._UND-1>, <https://www.cnrtl.fr/definition/32056#A._UND-4>, <https://www.cnrtl.fr/definition/32056#B._3.UND-8>, <https://www.cnrtl.fr/definition/32056#B._3.UND-9>, <https://www.cnrtl.fr/definition/32056#UND-12>, <https://www.cnrtl.fr/definition/32056#UND-5>.
+		<https://www.cnrtl.fr/definition/32056#A._2.UND-2> skos:definition "L'être comme concept."@fr .
+		<https://www.cnrtl.fr/definition/32056#A._2.UND-3> skos:definition "Idées, structures universelles de la conscience en acte"@fr .
+		<https://www.cnrtl.fr/definition/32056#A._UND-1> skos:definition "Fond de l'être, de nature idéale, conceptuelle ou divine."@fr .
+		<https://www.cnrtl.fr/definition/32056#A._UND-4> skos:definition "L'être idéal."@fr .
+		<https://www.cnrtl.fr/definition/32056#B._3.UND-8> skos:definition "Ce qu'il y a de plus important."@fr .
+		<https://www.cnrtl.fr/definition/32056#B._3.UND-9> skos:definition "Ce qu'il y a de plus pur, de plus original."@fr .
+		<https://www.cnrtl.fr/definition/32056#UND-12> skos:definition "Caractère ou qualité propre et nécessaire d'un être; ensemble des caractères constitutifs de quelque chose."@fr .
+		<https://www.cnrtl.fr/definition/32056#UND-5> skos:definition "Ce qu'un être est."@fr .
+
+<https://www.cnrtl.fr/definition/77364> a ontolex:LexicalEntry ; 
+		rdfs:label "scripturaire"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <https://www.cnrtl.fr/definition/77364#A._UND-1>, <https://www.cnrtl.fr/definition/77364#A._UND-2>, <https://www.cnrtl.fr/definition/77364#A._UND-4>, <https://www.cnrtl.fr/definition/77364#UND-5>, <https://www.cnrtl.fr/definition/77364#UND-6>.
+		<https://www.cnrtl.fr/definition/77364#A._UND-1> skos:definition "Prophète dont les paroles, mises par écrit, appartiennent au canon biblique."@fr .
+		<https://www.cnrtl.fr/definition/77364#A._UND-2> skos:definition "Ensemble des oracles des prophètes scripturaires."@fr .
+		<https://www.cnrtl.fr/definition/77364#A._UND-4> skos:definition "Caraïtes."@fr .
+		<https://www.cnrtl.fr/definition/77364#UND-5> skos:definition "Qui est relatif, qui appartient à l'Écriture sainte."@fr .
+		<https://www.cnrtl.fr/definition/77364#UND-6> skos:definition "Qui concerne l'écriture ou l'expression écrite."@fr .
+
+<https://www.cnrtl.fr/definition/25358> a ontolex:LexicalEntry ; 
+		rdfs:label "délarder"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <https://www.cnrtl.fr/definition/25358#A._UND-1>, <https://www.cnrtl.fr/definition/25358#A._UND-2>, <https://www.cnrtl.fr/definition/25358#B._1.UND-3>, <https://www.cnrtl.fr/definition/25358#B._1.UND-4>, <https://www.cnrtl.fr/definition/25358#B._UND-5>.
+		<https://www.cnrtl.fr/definition/25358#A._UND-1> skos:definition "Ôter le lard ou les lardons de (une pièce de viande)."@fr .
+		<https://www.cnrtl.fr/definition/25358#A._UND-2> skos:definition "Enlever le lard de (un porc)."@fr .
+		<https://www.cnrtl.fr/definition/25358#B._1.UND-3> skos:definition "Amincir grossièrement (une pièce), réduire l'épaisseur de."@fr .
+		<https://www.cnrtl.fr/definition/25358#B._1.UND-4> skos:definition "Couper obliquement le dessous de (une marche d'escalier)"@fr .
+		<https://www.cnrtl.fr/definition/25358#B._UND-5> skos:definition "Abattre les arêtes de (une pièce de bois) de manière à obtenir un prisme."@fr .
+
+<https://www.cnrtl.fr/definition/32960> a ontolex:LexicalEntry ; 
+		rdfs:label "exequatur"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/32960#UND-1>, <https://www.cnrtl.fr/definition/32960#UND-2>, <https://www.cnrtl.fr/definition/32960#UND-3>.
+		<https://www.cnrtl.fr/definition/32960#UND-1> skos:definition "Ordonnance du président du tribunal civil donnant force exécutoire à une sentence arbitrale"@fr .
+		<https://www.cnrtl.fr/definition/32960#UND-2> skos:definition "Procédure permettant de donner force exécutoire en France à un jugement rendu par une juridiction étrangère"@fr .
+		<https://www.cnrtl.fr/definition/32960#UND-3> skos:definition "Décret gouvernemental d'un pays donnant droit à un consul étranger d'exercer ses fonctions dans ce pays"@fr .
+
+<https://www.cnrtl.fr/definition/74800> a ontolex:LexicalEntry ; 
+		rdfs:label "ricocher"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <https://www.cnrtl.fr/definition/74800#A._UND-1>, <https://www.cnrtl.fr/definition/74800#UND-3>, <https://www.cnrtl.fr/definition/74800#UND-4>.
+		<https://www.cnrtl.fr/definition/74800#A._UND-1> skos:definition "Être renvoyé dans une autre direction après avoir frappé le sol ou un obstacle."@fr .
+		<https://www.cnrtl.fr/definition/74800#UND-3> skos:definition "Faire un ricochet sur l'eau."@fr .
+		<https://www.cnrtl.fr/definition/74800#UND-4> skos:definition "Être répercuté, revenir de manière indirecte."@fr .
+
+<https://www.cnrtl.fr/definition/57179> a ontolex:LexicalEntry ; 
+		rdfs:label "notion"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/57179#A._UND-1>, <https://www.cnrtl.fr/definition/57179#A._UND-2>, <https://www.cnrtl.fr/definition/57179#B._UND-3>, <https://www.cnrtl.fr/definition/57179#B._UND-4>, <https://www.cnrtl.fr/definition/57179#C._1.UND-5>, <https://www.cnrtl.fr/definition/57179#C._1.UND-6>, <https://www.cnrtl.fr/definition/57179#C._UND-7>.
+		<https://www.cnrtl.fr/definition/57179#A._UND-1> skos:definition "Connaissance immédiate, intuitive de quelque chose."@fr .
+		<https://www.cnrtl.fr/definition/57179#A._UND-2> skos:definition "Connaissance d'ensemble, élémentaire, acquise de quelque chose."@fr .
+		<https://www.cnrtl.fr/definition/57179#B._UND-3> skos:definition "Construction, représentation de l'esprit."@fr .
+		<https://www.cnrtl.fr/definition/57179#B._UND-4> skos:definition "Manière de concevoir, conception, point de vue."@fr .
+		<https://www.cnrtl.fr/definition/57179#C._1.UND-5> skos:definition "Idée générale et abstraite en tant qu'elle implique les caractères essentiels de l'objet."@fr .
+		<https://www.cnrtl.fr/definition/57179#C._1.UND-6> skos:definition "Notions qui font partie intégrante de la raison et sont communes à tous les hommes comme par exemple le principe de non-contradiction ("@fr .
+		<https://www.cnrtl.fr/definition/57179#C._UND-7> skos:definition "Attribut propre d'une personne, qui nous la fait connaître en la distinguant des autres personnes"@fr .
+
+<https://www.cnrtl.fr/definition/78807> a ontolex:LexicalEntry ; 
+		rdfs:label "simoniaque"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <https://www.cnrtl.fr/definition/78807#A._UND-1>, <https://www.cnrtl.fr/definition/78807#A._UND-2>, <https://www.cnrtl.fr/definition/78807#UND-4>.
+		<https://www.cnrtl.fr/definition/78807#A._UND-1> skos:definition "Qui est entaché de simonie."@fr .
+		<https://www.cnrtl.fr/definition/78807#A._UND-2> skos:definition "Qui a rapport à la simonie."@fr .
+		<https://www.cnrtl.fr/definition/78807#UND-4> skos:definition "Coupable de simonie."@fr .
+
+<https://www.cnrtl.fr/definition/8908> a ontolex:LexicalEntry ; 
+		rdfs:label "artilleur"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/8908#B._UND-1>, <https://www.cnrtl.fr/definition/8908#B._UND-2>.
+		<https://www.cnrtl.fr/definition/8908#B._UND-1> skos:definition "Ivrogne, homme qui boit beaucoup de canons"@fr .
+		<https://www.cnrtl.fr/definition/8908#B._UND-2> skos:definition "Chauffeur de taxi qui s'assure de grosses moyennes"@fr .
+
+<https://www.cnrtl.fr/definition/59008> a ontolex:LexicalEntry ; 
+		rdfs:label "orfèvre"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/59008#A._UND-3>, <https://www.cnrtl.fr/definition/59008#A._UND-4>, <https://www.cnrtl.fr/definition/59008#B._UND-8>, <https://www.cnrtl.fr/definition/59008#UND-6>.
+		<https://www.cnrtl.fr/definition/59008#A._UND-3> skos:definition "Artisan qui fait et/ou qui vend des bijoux en or. ("@fr .
+		<https://www.cnrtl.fr/definition/59008#A._UND-4> skos:definition "Artisan qui met en oeuvre et vend des diamants, des pierres précieuses, des perles ("@fr .
+		<https://www.cnrtl.fr/definition/59008#B._UND-8> skos:definition "Être expert en la matière, s'y connaître parfaitement."@fr .
+		<https://www.cnrtl.fr/definition/59008#UND-6> skos:definition "Artisan qui fabrique et/ou qui vend des objets de parure ou de décoration en métaux précieux finement travaillés, notamment des chandeliers, des couverts, de la vaisselle, des ornements d'église (calices, ciboires, patènes, coffrets et reliquaires)."@fr .
+
+<https://www.cnrtl.fr/definition/83772> a ontolex:LexicalEntry ; 
+		rdfs:label "tâtonnement"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/83772#A._UND-1>, <https://www.cnrtl.fr/definition/83772#A._UND-2>, <https://www.cnrtl.fr/definition/83772#A._UND-3>, <https://www.cnrtl.fr/definition/83772#B._2.UND-5>, <https://www.cnrtl.fr/definition/83772#B._2.UND-6>, <https://www.cnrtl.fr/definition/83772#B._UND-4>.
+		<https://www.cnrtl.fr/definition/83772#A._UND-1> skos:definition "Fait de s'orienter ou de chercher quelque chose un peu au hasard, ou en se repérant avec ses mains à cause de l'obscurité ou de tout autre obstacle."@fr .
+		<https://www.cnrtl.fr/definition/83772#A._UND-2> skos:definition "Geste hésitant pour atteindre un objectif."@fr .
+		<https://www.cnrtl.fr/definition/83772#A._UND-3> skos:definition "Manipulation d'approche spécifique."@fr .
+		<https://www.cnrtl.fr/definition/83772#B._2.UND-5> skos:definition "Méthode par laquelle on résout une question en essayant différentes suppositions ou différents moyens. ("@fr .
+		<https://www.cnrtl.fr/definition/83772#B._2.UND-6> skos:definition "Conception théorique de l'apprentissage de l'individu et du groupe, qui sous-entend la pratique de la pédagogie Freinet. (...) tout individu, placé dans un milieu matériel et humain favorable, cherche à connaître par tâtonnement, c'est-à-dire par essais, analyse, hypothèse, vérification individuelle et collective, et, par cette recherche, construit, intègre son savoir par les voies qui lui sont propres"@fr .
+		<https://www.cnrtl.fr/definition/83772#B._UND-4> skos:definition "Action qui procède par suppositions, expériences, essais hasardeux ou empiriques."@fr .
+
+<https://www.cnrtl.fr/definition/15417> a ontolex:LexicalEntry ; 
+		rdfs:label "calage"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/15417#B._UND-2>, <https://www.cnrtl.fr/definition/15417#UND-1>, <https://www.cnrtl.fr/definition/15417#UND-3>.
+		<https://www.cnrtl.fr/definition/15417#B._UND-2> skos:definition "Réglage d'un appareil de précision."@fr .
+		<https://www.cnrtl.fr/definition/15417#UND-1> skos:definition "Action d'assurer l'équilibre d'une chose au moyen d'une ou de plusieurs cales."@fr .
+		<https://www.cnrtl.fr/definition/15417#UND-3> skos:definition "Réglage."@fr .
+
+<https://www.cnrtl.fr/definition/62626> a ontolex:LexicalEntry ; 
+		rdfs:label "performance"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/62626#A._2.UND-2>, <https://www.cnrtl.fr/definition/62626#A._2.UND-3>, <https://www.cnrtl.fr/definition/62626#A._UND-1>, <https://www.cnrtl.fr/definition/62626#A._UND-4>, <https://www.cnrtl.fr/definition/62626#B._UND-5>, <https://www.cnrtl.fr/definition/62626#B._UND-6>, <https://www.cnrtl.fr/definition/62626#C._UND-8>, <https://www.cnrtl.fr/definition/62626#C._UND-9>, <https://www.cnrtl.fr/definition/62626#UND-11>.
+		<https://www.cnrtl.fr/definition/62626#A._2.UND-2> skos:definition "Résultat obtenu par un(e) athlète, une équipe dans une épreuve sportive, et exploit sportif."@fr .
+		<https://www.cnrtl.fr/definition/62626#A._2.UND-3> skos:definition "Abrév."@fr .
+		<https://www.cnrtl.fr/definition/62626#A._UND-1> skos:definition "Ensemble des résultats obtenus par un cheval de course sur les hippodromes, et succès remporté dans une course."@fr .
+		<https://www.cnrtl.fr/definition/62626#A._UND-4> skos:definition "Indications chiffrées, courbes, concernant les caractéristiques mécaniques (puissance, vitesse, autonomie) d'un véhicule ou les possibilités de vol d'un avion."@fr .
+		<https://www.cnrtl.fr/definition/62626#B._UND-5> skos:definition "Succès remporté par une personne; action, exhibition, interprétation demandant des qualités exceptionnelles."@fr .
+		<https://www.cnrtl.fr/definition/62626#B._UND-6> skos:definition "Rendement, fiabilité très élevé ou exceptionnel d'une machine, d'un objet, d'un matériau."@fr .
+		<https://www.cnrtl.fr/definition/62626#C._UND-8> skos:definition "Épreuve non verbale permettant d'apprécier l'intelligence concrète, pratique d'un individu."@fr .
+		<https://www.cnrtl.fr/definition/62626#C._UND-9> skos:definition "Réalisation d'un acte de langage."@fr .
+		<https://www.cnrtl.fr/definition/62626#UND-11> skos:definition "Tenue, aspect extérieur d'une personne."@fr .
+
+<https://www.cnrtl.fr/definition/79012> a ontolex:LexicalEntry ; 
+		rdfs:label "skating"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/79012#UND-1>, <https://www.cnrtl.fr/definition/79012#UND-2>.
+		<https://www.cnrtl.fr/definition/79012#UND-1> skos:definition "Patinage avec des patins à roulettes ou des patins à glace."@fr .
+		<https://www.cnrtl.fr/definition/79012#UND-2> skos:definition "Glissement du bras de la platine d'un tourne-disque."@fr .
+
+<https://www.cnrtl.fr/definition/11329> a ontolex:LexicalEntry ; 
+		rdfs:label "banche"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/11329#UND-1>.
+		<https://www.cnrtl.fr/definition/11329#UND-1> skos:definition "Banc d'argile durcie ou de roche tendre."@fr .
+
+<https://www.cnrtl.fr/definition/2428> a ontolex:LexicalEntry ; 
+		rdfs:label "aérologique"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <https://www.cnrtl.fr/definition/2428#UND_1>.
+		<https://www.cnrtl.fr/definition/2428#UND_1> skos:definition "Qui concerne l'étude des hautes couches de l'atmosphère"@fr .
+
+<https://www.cnrtl.fr/definition/23905> a ontolex:LexicalEntry ; 
+		rdfs:label "cypris"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/23905#UND-1>, <https://www.cnrtl.fr/definition/23905#UND-2>.
+		<https://www.cnrtl.fr/definition/23905#UND-1> skos:definition "Petit crustacé caractérisé par son test bombé, ses antennes à longues soies et vivant en eaux douces ou salées."@fr .
+		<https://www.cnrtl.fr/definition/23905#UND-2> skos:definition "Larve de cirripède"@fr .
+
+<https://www.cnrtl.fr/definition/15525> a ontolex:LexicalEntry ; 
+		rdfs:label "calicot"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/15525#UND-1>, <https://www.cnrtl.fr/definition/15525#UND_1>.
+		<https://www.cnrtl.fr/definition/15525#UND-1> skos:definition "Banderole de calicot ou de tissu grossier portant une inscription"@fr .
+		<https://www.cnrtl.fr/definition/15525#UND_1> skos:definition "Toile de coton assez grossière, de qualité très ordinaire."@fr .
+
+<https://www.cnrtl.fr/definition/63302> a ontolex:LexicalEntry ; 
+		rdfs:label "phagédénique"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <https://www.cnrtl.fr/definition/63302#UND-1>, <https://www.cnrtl.fr/definition/63302#UND-2>.
+		<https://www.cnrtl.fr/definition/63302#UND-1> skos:definition "Qui s'étend ou gagne en profondeur au lieu de cicatriser; qui ronge les tissus voisins."@fr .
+		<https://www.cnrtl.fr/definition/63302#UND-2> skos:definition "Qui est employé, pour son effet caustique, pour détruire les chairs fongueuses et les excroissances ("@fr .
+
+<https://www.cnrtl.fr/definition/84236> a ontolex:LexicalEntry ; 
+		rdfs:label "tenable"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <https://www.cnrtl.fr/definition/84236#D._UND-5>, <https://www.cnrtl.fr/definition/84236#UND-1>, <https://www.cnrtl.fr/definition/84236#UND-2>, <https://www.cnrtl.fr/definition/84236#UND-3>, <https://www.cnrtl.fr/definition/84236#UND-6>.
+		<https://www.cnrtl.fr/definition/84236#D._UND-5> skos:definition "Qui peut tenir, être soutenu."@fr .
+		<https://www.cnrtl.fr/definition/84236#UND-1> skos:definition "Qu'on peut tenir, maîtriser."@fr .
+		<https://www.cnrtl.fr/definition/84236#UND-2> skos:definition "Où l'ancre peut tenir, s'accrocher."@fr .
+		<https://www.cnrtl.fr/definition/84236#UND-3> skos:definition "Où l'on peut tenir, résister."@fr .
+		<https://www.cnrtl.fr/definition/84236#UND-6> skos:definition "Où on peut tenir, qu'on peut occuper, défendre."@fr .
+
+<https://www.cnrtl.fr/definition/55900> a ontolex:LexicalEntry ; 
+		rdfs:label "naturaliste"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <https://www.cnrtl.fr/definition/55900#I._UND-1>, <https://www.cnrtl.fr/definition/55900#I._UND-2>, <https://www.cnrtl.fr/definition/55900#III._A._UND-6>, <https://www.cnrtl.fr/definition/55900#III._UND-7>, <https://www.cnrtl.fr/definition/55900#III._UND-8>, <https://www.cnrtl.fr/definition/55900#UND-4>.
+		<https://www.cnrtl.fr/definition/55900#I._UND-1> skos:definition "Scientifique dont le champ d'activité relève des «sciences naturelles» (c'est-à-dire des sciences faisant l'inventaire et l'étude des «êtres naturels»: animaux, minéraux, végétaux)."@fr .
+		<https://www.cnrtl.fr/definition/55900#I._UND-2> skos:definition "Personne qui procède à la naturalisation des plantes et des animaux."@fr .
+		<https://www.cnrtl.fr/definition/55900#III._A._UND-6> skos:definition "Peintre, personne qui a cette conception de l'art:"@fr .
+		<https://www.cnrtl.fr/definition/55900#III._UND-7> skos:definition "Qui imite la nature, qui est fidèle à la nature."@fr .
+		<https://www.cnrtl.fr/definition/55900#III._UND-8> skos:definition "Qui se rattache au naturalisme; qui relève de cette doctrine."@fr .
+		<https://www.cnrtl.fr/definition/55900#UND-4> skos:definition "Qui repose sur le concept de nature."@fr .
+
+<https://www.cnrtl.fr/definition/13501> a ontolex:LexicalEntry ; 
+		rdfs:label "bondrée"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/13501#UND_1>.
+		<https://www.cnrtl.fr/definition/13501#UND_1> skos:definition "Rapace diurne, migrateur et insectivore souvent confondu avec la buse."@fr .
+
+<https://www.cnrtl.fr/definition/77539> a ontolex:LexicalEntry ; 
+		rdfs:label "séduction"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/77539#B._UND-2>, <https://www.cnrtl.fr/definition/77539#B._UND-3>, <https://www.cnrtl.fr/definition/77539#B._UND-4>, <https://www.cnrtl.fr/definition/77539#UND-1>.
+		<https://www.cnrtl.fr/definition/77539#B._UND-2> skos:definition "Tout ce qui, dans une personne ou une chose exerce un attrait irrésistible."@fr .
+		<https://www.cnrtl.fr/definition/77539#B._UND-3> skos:definition "Agréments, attraits, charmes."@fr .
+		<https://www.cnrtl.fr/definition/77539#B._UND-4> skos:definition "Phénomène inconscient, actualisant des problèmes infantiles, se manifestant par des avances, des attitudes de provocation à l'égard de parents ou d'adultes, visant plus à capter l'amour ou l'attention qu'à aboutir à une réalisation sexuelle concrète"@fr .
+		<https://www.cnrtl.fr/definition/77539#UND-1> skos:definition "Le fait de détourner du droit chemin, du bien, du devoir."@fr .
+
+<https://www.cnrtl.fr/definition/24908> a ontolex:LexicalEntry ; 
+		rdfs:label "décours"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/24908#UND-1>, <https://www.cnrtl.fr/definition/24908#UND-2>.
+		<https://www.cnrtl.fr/definition/24908#UND-1> skos:definition "Période de temps comprise entre la pleine et la nouvelle lune."@fr .
+		<https://www.cnrtl.fr/definition/24908#UND-2> skos:definition "Période de déclin d'une maladie."@fr .
+
+<https://www.cnrtl.fr/definition/29865> a ontolex:LexicalEntry ; 
+		rdfs:label "emménagogue"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <https://www.cnrtl.fr/definition/29865#UND_1>.
+		<https://www.cnrtl.fr/definition/29865#UND_1> skos:definition "Qui provoque ou facilite le flux menstruel."@fr .
+
+<https://www.cnrtl.fr/definition/7873> a ontolex:LexicalEntry ; 
+		rdfs:label "arbalestrille"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/7873#UND_1>.
+		<https://www.cnrtl.fr/definition/7873#UND_1> skos:definition "Instrument dont se servaient jusqu'en 1600 les navigateurs pour mesurer la hauteur du soleil ou des astres afin de déterminer la latitude, l'heure ou la distance angulaire de deux objets. ( ) : Cf. arbalète"@fr .
+
+<https://www.cnrtl.fr/definition/1480> a ontolex:LexicalEntry ; 
+		rdfs:label "acritique"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <https://www.cnrtl.fr/definition/1480#UND_1>.
+		<https://www.cnrtl.fr/definition/1480#UND_1> skos:definition "Qui n'a pas ?? examin? par la critique philosophique ou scientifique"@fr .
+
+<https://www.cnrtl.fr/definition/1351> a ontolex:LexicalEntry ; 
+		rdfs:label "acidose"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <https://www.cnrtl.fr/definition/1351#UND-1>.
+		<https://www.cnrtl.fr/definition/1351#UND-1> skos:definition "Maladie du premier ?e, d'origine inconnue, associant ? un retard psychomoteur avec hypotonie des troubles respiratoires, des crises de polypn? et des convulsions."@fr .
+
+<https://www.cnrtl.fr/definition/21009> a ontolex:LexicalEntry ; 
+		rdfs:label "condenseur"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/21009#A._UND-2>, <https://www.cnrtl.fr/definition/21009#UND-3>.
+		<https://www.cnrtl.fr/definition/21009#A._UND-2> skos:definition "Récipient en terre cuite réfractaire dans lequel se produit la condensation du zinc"@fr .
+		<https://www.cnrtl.fr/definition/21009#UND-3> skos:definition "Récipient dans lequel se produit la condensation* (B 1 a) d'un gaz ou d'une vapeur."@fr .
+
+<https://www.cnrtl.fr/definition/84604> a ontolex:LexicalEntry ; 
+		rdfs:label "téton"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/84604#B._2.UND-3>, <https://www.cnrtl.fr/definition/84604#B._2.UND-4>, <https://www.cnrtl.fr/definition/84604#B._UND-2>, <https://www.cnrtl.fr/definition/84604#UND-1>.
+		<https://www.cnrtl.fr/definition/84604#B._2.UND-3> skos:definition "Mèche qui présente au centre de la tête une petite protubérance en forme de langue d'aspic pour faciliter le forage tout en maintenant la solidité du trou percé."@fr .
+		<https://www.cnrtl.fr/definition/84604#B._2.UND-4> skos:definition "Sur une pièce métallique, excroissance ménagée au moment de sa fonte, pour faciliter son assujetissement sur le tour."@fr .
+		<https://www.cnrtl.fr/definition/84604#B._UND-2> skos:definition "Variété de pêche à pulpe molle et munie d'une extrémité ressemblant à un bout de sein"@fr .
+		<https://www.cnrtl.fr/definition/84604#UND-1> skos:definition "Sein (de femme)."@fr .
+
+<https://www.cnrtl.fr/definition/30629> a ontolex:LexicalEntry ; 
+		rdfs:label "enhardir"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <https://www.cnrtl.fr/definition/30629#I._A._UND-2>, <https://www.cnrtl.fr/definition/30629#I._A._UND-3>, <https://www.cnrtl.fr/definition/30629#I._UND-4>, <https://www.cnrtl.fr/definition/30629#I._UND-5>, <https://www.cnrtl.fr/definition/30629#II._A._UND-7>, <https://www.cnrtl.fr/definition/30629#II._A._UND-8>, <https://www.cnrtl.fr/definition/30629#II._UND-10>, <https://www.cnrtl.fr/definition/30629#UND-6>.
+		<https://www.cnrtl.fr/definition/30629#I._A._UND-2> skos:definition "Donner de l'assurance, de la hardiesse à quelqu'un."@fr .
+		<https://www.cnrtl.fr/definition/30629#I._A._UND-3> skos:definition "Donner de l'audace, de la hardiesse à quelqu'un."@fr .
+		<https://www.cnrtl.fr/definition/30629#I._UND-4> skos:definition "Rendre quelqu'un (plus) hardi."@fr .
+		<https://www.cnrtl.fr/definition/30629#I._UND-5> skos:definition "Être rendu (plus) hardi, plus original."@fr .
+		<https://www.cnrtl.fr/definition/30629#II._A._UND-7> skos:definition "Devenir (plus) hardi, prendre de l'assurance, de la hardiesse."@fr .
+		<https://www.cnrtl.fr/definition/30629#II._A._UND-8> skos:definition "Devenir (plus) hardi, acquérir de l'audace, de la hardiesse."@fr .
+		<https://www.cnrtl.fr/definition/30629#II._UND-10> skos:definition "S'affirmer, s'imposer."@fr .
+		<https://www.cnrtl.fr/definition/30629#UND-6> skos:definition "Rendre hardi, plus hardi."@fr .
+
+<https://www.cnrtl.fr/definition/11749> a ontolex:LexicalEntry ; 
+		rdfs:label "bassinage"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/11749#B._UND-2>, <https://www.cnrtl.fr/definition/11749#B._UND-3>, <https://www.cnrtl.fr/definition/11749#UND-1>, <https://www.cnrtl.fr/definition/11749#UND_1>.
+		<https://www.cnrtl.fr/definition/11749#B._UND-2> skos:definition "Action d'asperger de la pâte pour l'assouplir avant de la travailler."@fr .
+		<https://www.cnrtl.fr/definition/11749#B._UND-3> skos:definition "Action d'arroser superficiellement."@fr .
+		<https://www.cnrtl.fr/definition/11749#UND-1> skos:definition "Action d'humecter une plaie."@fr .
+		<https://www.cnrtl.fr/definition/11749#UND_1> skos:definition "Action de bassiner."@fr .
+
+<https://www.cnrtl.fr/definition/53516> a ontolex:LexicalEntry ; 
+		rdfs:label "mirette"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/53516#B._UND-2>, <https://www.cnrtl.fr/definition/53516#B._UND-3>.
+		<https://www.cnrtl.fr/definition/53516#B._UND-2> skos:definition "Outil servant aux maçons pour rejointoyer; aux sculpteurs pour enlever, en exécutant un modelage, la terre glaise en excédent"@fr .
+		<https://www.cnrtl.fr/definition/53516#B._UND-3> skos:definition "Outil servant à vérifier le niveau d'un pavage. ("@fr .
+
+<https://www.cnrtl.fr/definition/101> a ontolex:LexicalEntry ; 
+		rdfs:label "abandonnataire"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/101#UND_1>.
+		<https://www.cnrtl.fr/definition/101#UND_1> skos:definition "Pers. en faveur de qui est fait un abandon de biens ( 1956-58). cf."@fr .
+
+<https://www.cnrtl.fr/definition/63034> a ontolex:LexicalEntry ; 
+		rdfs:label "pessimisme"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/63034#A._UND-1>, <https://www.cnrtl.fr/definition/63034#A._UND-2>, <https://www.cnrtl.fr/definition/63034#UND-3>.
+		<https://www.cnrtl.fr/definition/63034#A._UND-1> skos:definition "Disposition d'esprit qui consiste à ne voir que le mauvais côté des choses, à trouver que tout va ou va aller mal."@fr .
+		<https://www.cnrtl.fr/definition/63034#A._UND-2> skos:definition "Croyance à l'issue, au dénouement défavorable d'une situation inquiétante, embarrassante."@fr .
+		<https://www.cnrtl.fr/definition/63034#UND-3> skos:definition "Doctrine selon laquelle dans le monde le mal l'emporte sur le bien, la souffrance sur le plaisir."@fr .
+
+<https://www.cnrtl.fr/definition/51087> a ontolex:LexicalEntry ; 
+		rdfs:label "marivaudage"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/51087#UND-1>, <https://www.cnrtl.fr/definition/51087#UND-2>.
+		<https://www.cnrtl.fr/definition/51087#UND-1> skos:definition "Recherche dans le langage et le style, dans l'analyse et l'expression des sentiments."@fr .
+		<https://www.cnrtl.fr/definition/51087#UND-2> skos:definition "Attitude, propos d'une galanterie délicate, recherchée, subtile, en particulier dans le domaine amoureux."@fr .
+
+<https://www.cnrtl.fr/definition/22310> a ontolex:LexicalEntry ; 
+		rdfs:label "corybante"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/22310#UND_1>.
+		<https://www.cnrtl.fr/definition/22310#UND_1> skos:definition "Pr?res de la m?e des Dieux, Cyb?e, qui dansaient arm?, aux sons des fl?tes, des tambours, des trompes et des boucliers frapp? par les lances, Les bruyants corybantes; les corybantes phrygiens"@fr .
+
+<https://www.cnrtl.fr/definition/7228> a ontolex:LexicalEntry ; 
+		rdfs:label "antiphrase"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/7228#UND_1>.
+		<https://www.cnrtl.fr/definition/7228#UND_1> skos:definition "Figure par laquelle, par crainte, scrupule ou ironie, on emploie un mot, un nom propre, une phrase, une locution, avec l'intention d'exprimer le contraire de ce que l'on a dit"@fr .
+
+<https://www.cnrtl.fr/definition/52797> a ontolex:LexicalEntry ; 
+		rdfs:label "méthodiste"@fr ;
+		lexinfo:partOfSpeech   lexinfo:adjective ;
+		ontolex:sense <https://www.cnrtl.fr/definition/52797#UND-1>, <https://www.cnrtl.fr/definition/52797#UND-2>.
+		<https://www.cnrtl.fr/definition/52797#UND-1> skos:definition "Qui appartient au méthodisme."@fr .
+		<https://www.cnrtl.fr/definition/52797#UND-2> skos:definition "Personne qui professe le méthodisme."@fr .
+
+<https://www.cnrtl.fr/definition/69355> a ontolex:LexicalEntry ; 
+		rdfs:label "provoquer"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <https://www.cnrtl.fr/definition/69355#A._2.UND-6>, <https://www.cnrtl.fr/definition/69355#A._2.UND-7>, <https://www.cnrtl.fr/definition/69355#A._2.UND-8>, <https://www.cnrtl.fr/definition/69355#A._UND-5>, <https://www.cnrtl.fr/definition/69355#C._1.UND-16>, <https://www.cnrtl.fr/definition/69355#C._UND-17>, <https://www.cnrtl.fr/definition/69355#UND-15>.
+		<https://www.cnrtl.fr/definition/69355#A._2.UND-6> skos:definition "Lancer un défi à quelqu'un, l'inciter à se mesurer avec soi."@fr .
+		<https://www.cnrtl.fr/definition/69355#A._2.UND-7> skos:definition "Mettre quelqu'un en demeure de se battre contre soi."@fr .
+		<https://www.cnrtl.fr/definition/69355#A._2.UND-8> skos:definition "(Chercher à) exciter le désir d'un(e) éventuel(le) partenaire"@fr .
+		<https://www.cnrtl.fr/definition/69355#A._UND-5> skos:definition "Exciter quelqu'un, le pousser, par un défi lancé ou par des outrances d'attitude ou de langage, à une action souvent violente et appelant elle-même une riposte."@fr .
+		<https://www.cnrtl.fr/definition/69355#C._1.UND-16> skos:definition "Faire naître, être à l'origine de, susciter."@fr .
+		<https://www.cnrtl.fr/definition/69355#C._UND-17> skos:definition "Prendre l'initiative de quelque chose; intenter une action; faire une demande (en justice)."@fr .
+		<https://www.cnrtl.fr/definition/69355#UND-15> skos:definition "Inciter, pousser quelqu'un à."@fr .
+
+<https://www.cnrtl.fr/definition/81197> a ontolex:LexicalEntry ; 
+		rdfs:label "stratigraphie"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/81197#A._UND-1>, <https://www.cnrtl.fr/definition/81197#A._UND-2>, <https://www.cnrtl.fr/definition/81197#UND-3>, <https://www.cnrtl.fr/definition/81197#UND-4>.
+		<https://www.cnrtl.fr/definition/81197#A._UND-1> skos:definition "Ensemble de couches de sédiments."@fr .
+		<https://www.cnrtl.fr/definition/81197#A._UND-2> skos:definition "Méthode de travail consistant à différencier, sur un site, les couches superposées d'occupation humaine, afin d'établir entre elles une chronologie d'abord relative puis, après l'étude du matériel recueilli, absolue et de reconstituer l'histoire du site ensemble des couches d'un site."@fr .
+		<https://www.cnrtl.fr/definition/81197#UND-3> skos:definition "Étude de la succession chronologique et de la répartition géographique des formations sédimentaires ou d'origine sédimentaire, généralement stratifiées."@fr .
+		<https://www.cnrtl.fr/definition/81197#UND-4> skos:definition "Variante de la tomographie"@fr .
+
+<https://www.cnrtl.fr/definition/75785> a ontolex:LexicalEntry ; 
+		rdfs:label "ruinure"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/75785#UND_1>.
+		<https://www.cnrtl.fr/definition/75785#UND_1> skos:definition "Entaille pratiquée sur la face latérale d'une solive ou d'un poteau pour donner plus de prise à la maçonnerie des entrevous. ("@fr .
+
+<https://www.cnrtl.fr/definition/83974> a ontolex:LexicalEntry ; 
+		rdfs:label "tégénaire"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/83974#UND_1>.
+		<https://www.cnrtl.fr/definition/83974#UND_1> skos:definition "Grosse araignée à longues pattes, l'une des plus communes dans les habitations où elle tend sa toile dans l'angle des murs des greniers et des caves."@fr .
+
+<https://www.cnrtl.fr/definition/14760> a ontolex:LexicalEntry ; 
+		rdfs:label "bruitage"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/14760#UND-1>, <https://www.cnrtl.fr/definition/14760#UND-2>.
+		<https://www.cnrtl.fr/definition/14760#UND-1> skos:definition "Action de bruiter."@fr .
+		<https://www.cnrtl.fr/definition/14760#UND-2> skos:definition "Résultat de cette action."@fr .
+
+<https://www.cnrtl.fr/definition/64413> a ontolex:LexicalEntry ; 
+		rdfs:label "piétin"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/64413#UND-1>, <https://www.cnrtl.fr/definition/64413#UND-2>.
+		<https://www.cnrtl.fr/definition/64413#UND-1> skos:definition "Maladie des céréales due à divers champignons causant des lésions à la base du chaume entraînant soit le dessèchement et l'avortement des épis (...) soit une cassure du chaume"@fr .
+		<https://www.cnrtl.fr/definition/64413#UND-2> skos:definition "Affection contagieuse du pied du mouton, qui consiste en une nécrose des tissus sous-cornés pouvant s'étendre aux articulations et aux ligaments."@fr .
+
+<https://www.cnrtl.fr/definition/20651> a ontolex:LexicalEntry ; 
+		rdfs:label "communiser"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <https://www.cnrtl.fr/definition/20651#UND_1>.
+		<https://www.cnrtl.fr/definition/20651#UND_1> skos:definition "Soumettre un pays, une société à l'influence des idées communistes, donner un régime communiste à un pays."@fr .
+
+<https://www.cnrtl.fr/definition/84663> a ontolex:LexicalEntry ; 
+		rdfs:label "tétralogie"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/84663#A._UND-1>, <https://www.cnrtl.fr/definition/84663#A._UND-2>.
+		<https://www.cnrtl.fr/definition/84663#A._UND-1> skos:definition "Ensemble de quatre pièces (trois tragédies et un drame satyrique) présentées par un même auteur aux concours dramatiques."@fr .
+		<https://www.cnrtl.fr/definition/84663#A._UND-2> skos:definition "Ensemble de quatre uvres littéraires ou musicales présentant un certain rapport entre elles."@fr .
+
+<https://www.cnrtl.fr/definition/41889> a ontolex:LexicalEntry ; 
+		rdfs:label "hydrolat"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/41889#UND_1>.
+		<https://www.cnrtl.fr/definition/41889#UND_1> skos:definition "Préparation aqueuse aromatique obtenue en distillant de l'eau où baigne une substance végétale."@fr .
+
+<https://www.cnrtl.fr/definition/64310> a ontolex:LexicalEntry ; 
+		rdfs:label "picaro"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/64310#UND-1>, <https://www.cnrtl.fr/definition/64310#UND-2>.
+		<https://www.cnrtl.fr/definition/64310#UND-1> skos:definition "Aventurier espagnol, héros de la littérature picaresque."@fr .
+		<https://www.cnrtl.fr/definition/64310#UND-2> skos:definition "Intrigant sans scrupules."@fr .
+
+<https://www.cnrtl.fr/definition/45447> a ontolex:LexicalEntry ; 
+		rdfs:label "interpsychologie"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/45447#UND_1>.
+		<https://www.cnrtl.fr/definition/45447#UND_1> skos:definition "Étude des interactions psychologiques, conscientes ou non, des individus d'une collectivité."@fr .
+
+<https://www.cnrtl.fr/definition/41790> a ontolex:LexicalEntry ; 
+		rdfs:label "hydarthrose"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/41790#UND_1>.
+		<https://www.cnrtl.fr/definition/41790#UND_1> skos:definition "Épanchement de liquide séreux dans une cavité articulaire."@fr .
+
+<https://www.cnrtl.fr/definition/58676> a ontolex:LexicalEntry ; 
+		rdfs:label "opaliser"@fr ;
+		lexinfo:partOfSpeech   lexinfo:verb ;
+		ontolex:sense <https://www.cnrtl.fr/definition/58676#UND-1>, <https://www.cnrtl.fr/definition/58676#UND-2>.
+		<https://www.cnrtl.fr/definition/58676#UND-1> skos:definition "Donner un aspect opalin à quelque chose; donner l'aspect, la couleur, les reflets de l'opale."@fr .
+		<https://www.cnrtl.fr/definition/58676#UND-2> skos:definition "Rendre opale. ("@fr .
+
+<https://www.cnrtl.fr/definition/66400> a ontolex:LexicalEntry ; 
+		rdfs:label "polyarthrite"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/66400#UND_1>.
+		<https://www.cnrtl.fr/definition/66400#UND_1> skos:definition "Arthrite qui atteint simultanément plusieurs articulations."@fr .
+
+<https://www.cnrtl.fr/definition/22618> a ontolex:LexicalEntry ; 
+		rdfs:label "couque"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:masculine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/22618#UND-1>, <https://www.cnrtl.fr/definition/22618#UND-2>, <https://www.cnrtl.fr/definition/22618#UND_1>.
+		<https://www.cnrtl.fr/definition/22618#UND-1> skos:definition "Cuisinier dans un camp de bûcherons"@fr .
+		<https://www.cnrtl.fr/definition/22618#UND-2> skos:definition "Cuisinier à bord d'un navire"@fr .
+		<https://www.cnrtl.fr/definition/22618#UND_1> skos:definition "Cuisinier."@fr .
+
+<https://www.cnrtl.fr/definition/27417> a ontolex:LexicalEntry ; 
+		rdfs:label "disgrâce"@fr ;
+		lexinfo:partOfSpeech   lexinfo:noun ;
+		lexinfo:gender lexinfo:feminine ;
+		ontolex:sense <https://www.cnrtl.fr/definition/27417#A._1.UND-3>, <https://www.cnrtl.fr/definition/27417#A._1.UND-4>, <https://www.cnrtl.fr/definition/27417#A._UND-6>, <https://www.cnrtl.fr/definition/27417#B._UND-8>, <https://www.cnrtl.fr/definition/27417#B._UND-9>.
+		<https://www.cnrtl.fr/definition/27417#A._1.UND-3> skos:definition "Perte des faveurs, des bonnes grâces dont on bénéficiait; état d'une personne privée des faveurs dont elle jouissait."@fr .
+		<https://www.cnrtl.fr/definition/27417#A._1.UND-4> skos:definition "Perte de considération ou d'intérêt, discrédit."@fr .
+		<https://www.cnrtl.fr/definition/27417#A._UND-6> skos:definition "Malheur, revers de fortune."@fr .
+		<https://www.cnrtl.fr/definition/27417#B._UND-8> skos:definition "Manque de grâce, de charme dans l'aspect, l'attitude ou l'esprit d'une personne."@fr .
+		<https://www.cnrtl.fr/definition/27417#B._UND-9> skos:definition "Absence de grâce, d'attrait dans une chose."@fr .

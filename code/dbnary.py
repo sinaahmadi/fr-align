@@ -9,7 +9,7 @@ from SPARQLWrapper import SPARQLWrapper, JSON
    found these pos tags ['noun', 'properNoun', 'verb', 'adjective', 'adverb']
 """
 
-def extract_dbnary(word, pos,):
+def extract_dbnary(word, pos):
    sparql = SPARQLWrapper("http://kaiko.getalp.org/sparql")
 
    sense_query = """
