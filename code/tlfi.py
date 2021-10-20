@@ -356,4 +356,11 @@ def tlfi_lookup(word, pos):
 # print(tlfi_lookup("unique", "adjective"))
 # print(tlfi_lookup("inhabituel", "adjective"))
 
+# remove "" in the sense ID
+# ($
+# none related exact
+# IAA
+# IAA for pairs of annotators in G1
+# add more data
 
+# narrower, broader, exact (strict), related and none

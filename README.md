@@ -50,26 +50,44 @@ In both resources, the microstructure of each entry is reshaped as follows:
 Based on the lemmata used in the [MWSA datasets](https://github.com/elexis-eu/mwsa) (which are based on the English WordNet), we retrieve the synsets associated to the word in the French language based the Open Multilingual WordNet. The is beneficial to carry out cross-lingual word-sense alignment tasks in the future.
 
 The relevant information are then extracted for these words in French as described in the previous section. Given a lemma with identical part-of-speech and gender in TLFi and Wiktionnaire, a combination of all possible definition/sense matches are provided. This way, the annotator can select one of the following relations between every pair of senses in the two resources:
+
 - `none`: the two senses/definitions are not referring to the same concepts, i.e. meanings
-- `exact`: the two senses/definitions are semantically identical
-- `related`: the two senses/definitions are not referring to the same concepts but are **semantically related**
+- `exact`: the two senses/definitions are semantically identical. In our meeting on September 29th, we referred to this category as *strict exact* indicating the fact that the two senses/definitions should strictly be identical.
+- `broader`: the first sense/definition completely covers the meaning of the second one and is applicable to further meanings
+- `narrower`: the sense in the first sense/definition is entirely covered by the second one, which is applicable to further meanings.
+- `related`: There are cases when the senses may be equal but the definitions in both dictionaries differ in key aspects despite being **semantically related**
+
+These type of relations are based on [SKOS's semantic relations](https://www.w3.org/TR/skos-reference/#semantic-relations). It should be noted that the proposed relations, except `broader` and `narrower`, are symmetric. Therefore, `R(A, B)` equals with `R(B, A)`, where `R()` refers to the relation between `A` and `B`. Regarding `broader`, it is the inverse relation of `narrower`, i.e. if `R(A, B)=broader`, then `R(B, A)=narrower`.
 
 Here are a few examples:
 
 - `livre` (noun, masculine)
-
-    - proposed relation: **`related`**
-        - *Ouvrage imprimé, relié ou broché, non périodique, comportant un assez grand nombre de pages.* (TLF)
-        - *Ouvrage qui fait référence à un texte sacré* (Wiktionnaire) 
-    - proposed relation: **`exact`**
-        - *Assemblage de feuilles en nombre plus ou moins élevé, portant des signes destinés à être lus.* (TLF)
-        - *Assemblage de feuilles manuscrites ou imprimées destinées à être lues.* (Wiktionnaire) 
     - proposed relation: **`none`**  
-        - *Ouvrage constituant un volume imprimé.* (TLF)
-        - *Registre destiné à recueillir les signatures et les commentaires des visiteurs.* (Wiktionnaire) 
+        - *Ouvrage constituant un volume imprimé.* (Wiktionnaire)
+        - *Registre destiné à recueillir les signatures et les commentaires des visiteurs.* (TLF) 
+    - proposed relation: **`exact`**
+	    - *Assemblage de feuilles manuscrites ou imprimées destinées à être lues.* (Wiktionnaire) 
+        - *Assemblage de feuilles en nombre plus ou moins élevé, portant des signes destinés à être lus.* (TLF)
+	- proposed relation: **`narrower`**
+        - *Ouvrage qui fait référence à un texte sacré* (Wiktionnaire) 
+        - *Ouvrage imprimé, relié ou broché, non périodique, comportant un assez grand nombre de pages.* (TLF)
+	- proposed relation: **`broader`**
+        - *Ouvrage constituant un volume imprimé.* (Wiktionnaire)
+        - *Ouvrage en vers ou en prose, d'une certaine étendue.* (TLF) 
+    - proposed relation: **`related`**
+        - *Chacune des parties principales de certains ouvrages.* (Wiktionnaire)
+        - *Ensemble de feuilles de parchemin ou de papier écrites des deux côtés et rassemblées en cahiers* (TLF)
 
-These type of relations are based on [SKOS's semantic relations](https://www.w3.org/TR/skos-reference/#semantic-relations). It should be noted that the proposed relations are symmetric. Therefore, `R(A, B)` equals with `R(B, A)`, where `R()` refers to the relation between `A` and `B`. 
+The following, is another example that we annotated together for the word *bannissement* (noun) in [TLF](https://www.cnrtl.fr/definition/11377) and [Wiktionnaire](http://kaiko.getalp.org/dbnary/fra/bannissement__nom__1):
 
+| TLF                                                                                                                                                   | Relation | Wiktionnaire                                                                                         |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------|----------|------------------------------------------------------------------------------------------------------|
+| Peine politique criminelle infamante consistant dans la défense, pour le condamné, de résider sur le territoire national pendant une durée déterminée | none     | Action de bannir, d’expulser une personne en lui interdisant de revenir ou résultat de cette action. |
+| Simple mesure d'éloignement prise à l'égard de certaines personnes, notamment des membres de familles ayant régné                                     | related  | Action de bannir, d’expulser une personne en lui interdisant de revenir ou résultat de cette action. |
+| Éloignement imposé de quelque chose                                                                                                                   | related  | Action de bannir, d’expulser une personne en lui interdisant de revenir ou résultat de cette action. |
+| Action de bannir; état qui en résulte                                                                                                                 | exact    | Action de bannir, d’expulser une personne en lui interdisant de revenir ou résultat de cette action. |
+
+<!-- 
 🆕 (update on Sep. 15th) Given the complexity of some sense distinctions, particularly those that may be annotated as **`related`** or **`exact`**, we follow the definitions of exact and related according to [SKOS Simple Knowledge Organization System (SKOS)](https://www.w3.org/TR/skos-reference). Based on this data model, **`related`** and **`exact`** are respectively equivalent to `skos:related` and `skos:exactMatch`. The followings shows the hierarchy of properties in this data model:
 
 ![SKOS mapping properties](SKOS_mapping_properties.png)
@@ -77,8 +95,7 @@ These type of relations are based on [SKOS's semantic relations](https://www.w3.
 Therefore, other types of semantic relations, such as `broader` and `narrower` can be considered as `related` as they are subclasses of that property (not to be confused with `skos:relatedMatch`). According to [Section 10.6.1. in the reference](https://www.w3.org/TR/skos-reference/#mapping), mapping properties `skos:broadMatch`, `skos:narrowMatch` and `skos:relatedMatch` are provided for a more fine-grained organization of concepts arguing that:
 
 > The rationale behind this design is that it is hard to draw an absolute distinction between internal links within a concept scheme and mapping links between concept schemes. This is especially true in an open environment where different people might re-organize concepts into concept schemes in different ways. What one person views as two concept schemes with mapping links between, another might view as one single concept scheme with internal links only. This specification allows both points of view to co-exist, which (it is hoped) will promote flexibility and innovation in the re-use of SKOS data in the Web. 
-
-<!-- In order to evaluate the level of (dis)agreement among annotators, we will then calculate an inter-annotator agreement such as [Fleis's Kappa](https://en.wikipedia.org/wiki/Fleiss%27_kappa). -->
+In order to evaluate the level of (dis)agreement among annotators, we will then calculate an inter-annotator agreement such as [Fleis's Kappa](https://en.wikipedia.org/wiki/Fleiss%27_kappa). -->
 
 
 ## Inter-annotator agreement

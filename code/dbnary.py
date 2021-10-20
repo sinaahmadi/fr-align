@@ -76,3 +76,4 @@ def dbnary_lookup(lemma, pos):
 
 
 # print(dbnary_lookup("ignare", "adjective"))
+print(dbnary_lookup("baroque", "adjective"))

@@ -68,9 +68,9 @@ def convert_to_ontolex(microstructure, dataset_name="TLFi"):
 		if type(sense) == str:
 			# sense_id = lemma_id + "_" + shortuuid.uuid()[0:5]
 			if dataset_name == "TLFi":
-				sense_id = lemma_id + "#" + sense.replace(" ", "")
+				sense_id = lemma_id + "#" + sense.replace(" ", "").replace("\"", "")
 			else:
-				sense_id = sense.replace(" ", "")
+				sense_id = sense.replace(" ", "").replace("\"", "")
 			senses_ids.append("<" + sense_id + ">")
 			# sense_defs.append("<http://elex.is/mwsa/#?id_sense> skos:definition \"?def\"@fr .".replace("?def", senses[sense].replace("\"", "\\\"")).replace("?id_sense", sense_id))
 			sense_defs.append("\t\t<?id_sense> skos:definition \"?def\"@fr .".replace("?def", senses[sense]).replace("?id_sense", sense_id))
