@@ -100,7 +100,7 @@ In order to evaluate the level of (dis)agreement among annotators, we will then 
 
 ## Inter-annotator agreement
 
-As of September 15th, Krippendorff's alpha for the two datasets of the two groups of annotators is as follows:
+<!-- As of September 15th, Krippendorff's alpha for the two datasets of the two groups of annotators is as follows:
 
 - Group 1 (annotated by Mathieu, Hee-Soo and Bruno): **0.29**. 228 pairs of definitions are annotated.
 - Group 2 (annotated by Karen and Sina): **0.39**. 227 pairs of definitions are annotated.
@@ -110,7 +110,7 @@ The following figure illustrates heatmaps of how each two annotators perform com
 ![annotation_confusion_matrices](output/combined_images.jpg)
 
 Here are the comparison of the annotations of [group_1](output/annotation/Groupe_1_all.tsv) and [group_2](output/annotation/Groupe_2_all.tsv).
-
+ -->
 
 
 ## Alignment techniques
