@@ -57,7 +57,7 @@ The relevant information are then extracted for these words in French as describ
 - `narrower`: the first sense/definition is entirely covered by the second one, which is applicable to further meanings.
 - `related`: There are cases when the senses may be equal but the definitions in both dictionaries differ in key aspects despite being **semantically related**
 
-These type of relations are based on [SKOS's semantic relations](https://www.w3.org/TR/skos-reference/#semantic-relations). It should be noted that the proposed relations, except `broader` and `narrower`, are symmetric. Therefore, `R(A, B)` equals with `R(B, A)`, where `R()` refers to the relation between `A` and `B`. Regarding `broader`, it is the inverse relation of `narrower`, i.e. if `R(A, B)=broader`, then `R(B, A)=narrower`.
+These types of relations are based on [SKOS's semantic relations](https://www.w3.org/TR/skos-reference/#semantic-relations). It should be noted that the proposed relations, except `broader` and `narrower`, are symmetric. Therefore, `R(A, B)` equals with `R(B, A)`, where `R()` refers to the relation between `A` and `B`. Regarding `broader`, it is the inverse relation of `narrower`, i.e. if `R(A, B)=broader`, then `R(B, A)=narrower`.
 
 Here are a few examples:
 
