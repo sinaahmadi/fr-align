@@ -54,7 +54,7 @@ The relevant information are then extracted for these words in French as describ
 - `none`: the two senses/definitions are not referring to the same concepts, i.e. meanings
 - `exact`: the two senses/definitions are semantically identical. In our meeting on September 29th, we referred to this category as *strict exact* indicating the fact that the two senses/definitions should strictly be identical.
 - `broader`: the first sense/definition completely covers the meaning of the second one and is applicable to further meanings
-- `narrower`: the sense in the first sense/definition is entirely covered by the second one, which is applicable to further meanings.
+- `narrower`: the first sense/definition is entirely covered by the second one, which is applicable to further meanings.
 - `related`: There are cases when the senses may be equal but the definitions in both dictionaries differ in key aspects despite being **semantically related**
 
 These type of relations are based on [SKOS's semantic relations](https://www.w3.org/TR/skos-reference/#semantic-relations). It should be noted that the proposed relations, except `broader` and `narrower`, are symmetric. Therefore, `R(A, B)` equals with `R(B, A)`, where `R()` refers to the relation between `A` and `B`. Regarding `broader`, it is the inverse relation of `narrower`, i.e. if `R(A, B)=broader`, then `R(B, A)=narrower`.
