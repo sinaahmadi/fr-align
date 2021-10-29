@@ -61,7 +61,7 @@ These types of relations are based on [SKOS's semantic relations](https://www.w3
 
 Here are a few examples:
 
-- `livre` (noun, masculine)
+- `livre` (noun, masculine) ([TLFi](https://www.cnrtl.fr/definition/livre), [Wiktionnary](https://fr.wiktionary.org/wiki/livre#fr-nom-1))
     - proposed relation: **`none`**  
         - *Ouvrage constituant un volume imprimé.* (Wiktionnaire)
         - *Registre destiné à recueillir les signatures et les commentaires des visiteurs.* (TLF) 
