@@ -218,8 +218,8 @@ def create_annotation_sheets():
 	"""
 
 	wiktionary, tlfi_dict, annotation_sheet = list(), list(), list()
-	for word in list(extract_mwsa_lemmata().values())[0:200]: # random selection
-		if "\'" in word[0] or word[1] != "adjective":
+	for word in list(extract_mwsa_lemmata().values())[300:500]: # random selection
+		if "\'" in word[0]:# or word[1] != "adjective": #skip multi-word units
 			continue
 		print("Processing ", word)
 
@@ -254,8 +254,8 @@ def create_annotation_sheets():
 			if lexeme["lexeme"]["value"] not in entry_wiktionary:
 				if "gender" not in lexeme or \
 					((len(lexeme["gender"]["value"]) and lexeme["gender"]["value"].split("#")[-1] == gender)) or \
-					pos == "adjective" or \
-					pos == "adverb":
+						pos == "adjective" or \
+						pos == "adverb":
 					entry_wiktionary[lexeme["lexeme"]["value"]] = {
 					"lemma": lemma,
 					"pos": pos,
@@ -265,6 +265,9 @@ def create_annotation_sheets():
 				else:
 					if "gender" not in lexeme or len(lexeme["gender"]["value"]) and lexeme["gender"]["value"].split("#")[-1] == gender:
 						entry_wiktionary[lexeme["lexeme"]["value"]]["senses"].update({lexeme["sense"]["value"]: lexeme["definition"]["value"]})
+			else:
+				entry_wiktionary[lexeme["lexeme"]["value"]]["senses"].update({lexeme["sense"]["value"]: lexeme["definition"]["value"]})
+
 
 		# print(entry_tlfi)
 		# print(entry_wiktionary)
@@ -287,6 +290,7 @@ def create_annotation_sheets():
 		f.write("\n".join(annotation_sheet))
 
 if __name__ == '__main__':
+	create_annotation_sheets()
 	# create_naisc_input("TLFi")
-	create_naisc_input("Wiktionnaire")
+	# create_naisc_input("Wiktionnaire")
 	
