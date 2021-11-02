@@ -100,18 +100,34 @@ In order to evaluate the level of (dis)agreement among annotators, we will then 
 
 ## Inter-annotator agreement
 
-<!-- As of September 15th, Krippendorff's alpha for the two datasets of the two groups of annotators is as follows:
+### First attempt
+Initially, we took only three semantic relations into account with slightly different definitions: `related`, `exact` and `none`. For this annotation task, Krippendorff's alpha of the two groups of annotators is as follows:
 
-- Group 1 (annotated by Mathieu, Hee-Soo and Bruno): **0.29**. 228 pairs of definitions are annotated.
-- Group 2 (annotated by Karen and Sina): **0.39**. 227 pairs of definitions are annotated.
+- Group 1 (annotated by Mathieu, Hee-Soo and Bruno): 0.29. 228 pairs of definitions are annotated.
+- Group 2 (annotated by Karen and Sina): 0.39. 227 pairs of definitions are annotated.
 
 The following figure illustrates heatmaps of how each two annotators perform comparatively: 
 
+![annotation_confusion_matrices](output/annotation/Initial/combined_images.jpg)
+
+Here are the comparison of the annotations of [group_1](output/annotation/Initial/annotation/Groupe_1_all.tsv) and [group_2](output/annotation/Initial/annotation/Groupe_2_all.tsv).
+
+### New attempt
+
+In our new attempt, the annotation task is carried out according to the new guidelines where five semantic relations are taken into account. 
+
+The Krippendorff's alpha of the two groups of annotators is as follows:
+
+| Annotators                | 5-class   | 2-class   |
+|------------------------   |---------  |---------  |
+| Group 1 (HS - MC - BG)    | 0.39      | 0.484     |
+| Group 2 (SA - KF)         |           |           |
+
+In addition to the five classes, the inter-annotator agreement is calculated for alignable (0) versus non-alignable (1). 
+
 ![annotation_confusion_matrices](output/combined_images.jpg)
 
-Here are the comparison of the annotations of [group_1](output/annotation/Groupe_1_all.tsv) and [group_2](output/annotation/Groupe_2_all.tsv).
- -->
-
+Here is the comparison of the annotations of [group_1](output/annotation/New/Groupe_1_all.tsv).
 
 ## Alignment techniques
 

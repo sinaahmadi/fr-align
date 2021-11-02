@@ -8,32 +8,37 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 confusion_matrix = {
-		"exact": {"exact": 0, "related": 0, "none": 0},
-		"related": {"exact": 0, "related": 0, "none": 0},
-		"none": {"exact": 0, "related": 0, "none": 0}
+		"exact": {"exact": 0, "related": 0, "none": 0, "narrower": 0, "broader": 0},
+		"related": {"exact": 0, "related": 0, "none": 0, "narrower": 0, "broader": 0},
+		"none": {"exact": 0, "related": 0, "none": 0, "narrower": 0, "broader": 0},
+		"narrower": {"exact": 0, "related": 0, "none": 0, "narrower": 0, "broader": 0},
+		"broader": {"exact": 0, "related": 0, "none": 0, "narrower": 0, "broader": 0}
 		}
 
-def calculate_groupe_1(print_confusion_matrix=False, plot_confusion_matrix=True):
+def calculate_groupe_1(directory, print_confusion_matrix=False, plot_confusion_matrix=True, is_binary=False):
 	print("\nGroupe 1 =====================")
 	print("Annotators: Mathieu, Hee-Soo, Bruno")
 
 	conf_matrix_1, conf_matrix_2, conf_matrix_3 = copy.deepcopy(confusion_matrix), \
-																									copy.deepcopy(confusion_matrix), \
-																									copy.deepcopy(confusion_matrix)
+												copy.deepcopy(confusion_matrix), \
+												copy.deepcopy(confusion_matrix)
 
-	with open("annotation/Groupe_1_MC.tsv") as f:
+	with open(directory + "Groupe_1_MC.tsv") as f:
 		ann_1 = f.read().split("\n")[1:]
 
-	with open("annotation/Groupe_1_BG.tsv") as f:
+	with open(directory + "Groupe_1_BG.tsv") as f:
 		ann_2 = f.read().split("\n")[1:]
 
-	with open("annotation/Groupe_1_HS.tsv") as f:
+	with open(directory + "Groupe_1_HS.tsv") as f:
 		ann_3 = f.read().split("\n")[1:]
 
 	print("number of annotated entries: ", len(ann_1), len(ann_1) == len(ann_2) == len(ann_3))
 	coder_1, coder_2, coder_3 = list(), list(), list()
 
-	relations = {"none":0, "exact": 1, "related": 2}
+	if is_binary:
+		relations = {"none":0, "exact": 1, "related": 1, "narrower": 1, "broader": 1}
+	else:
+		relations = {"none":0, "exact": 1, "related": 2, "narrower": 3, "broader": 4}
 	for i, j, k in zip(ann_1, ann_2, ann_3):
 		if len(i.split("\t")[3]):
 			coder_1.append(relations[i.split("\t")[3]])
@@ -113,11 +118,10 @@ def calculate_groupe_2(print_confusion_matrix=False, plot_confusion_matrix=True)
 	print("krippendorff\'s alpha is :", res)
 	return [coder_1, coder_2]
 
-m_1 = calculate_groupe_1()
+directory = "annotation/New/"
+m_1 = calculate_groupe_1(directory)
 # print(m_1)
-m_2 =calculate_groupe_2()
+m_1 = calculate_groupe_1(directory, is_binary=True)
+# print(m_1)
+# m_2 =calculate_groupe_2()
 
-
-# confusion matrix
-# examples int the annotation guide (related vs exact)
-# assign a different value for the distances between exact and related
