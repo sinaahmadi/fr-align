@@ -120,8 +120,10 @@ The Krippendorff's alpha of the two groups of annotators is as follows:
 
 | Annotators                | 5-class   | 2-class   |
 |------------------------   |---------  |---------  |
-| Group 1 (HS - MC - BG)    | 0.39      | 0.484     |
-| Group 2 (SA - KF)         |           |           |
+| Group 1 (HS - MC - BG) - Batch 1    | 0.39      | 0.484     |
+| Group 1 (HS - MC - BG) - Batch 2    | 0.492      | 0.61     |
+| Group 2 (SA - KF) - Batch 1        |           |           |
+| Group 2 (SA - KF) - Batch 2        |     0.83      |    0.88       |
 
 In addition to the five classes, the inter-annotator agreement is calculated for alignable (0) versus non-alignable (1). 
 
